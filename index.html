@@ -1,1 +1,202 @@
-Hello World in Demo
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  
+      <head>
+        <meta charset="utf-8">
+
+          <style type="text/css">
+                 a:link { color: black; text-decoration: none;}
+                 a:visited { color: black; text-decoration: none;}
+                 a:hover { color: blue; text-decoration: underline;}
+                              				 #player {width: 300px;}​
+
+        
+           </style>
+           <style>
+            .masthead-heading {
+            text-align: center; 
+          }</style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>FLowHigh Demo</title>
+
+
+        </head>
+        <body id="page-top">
+          <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+              <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Audio Demos</a>
+                  <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#abstract">Abstract</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sptoen">Spanish-to-English</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#audiosr">French-to-English</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ablation">English-to-Spanish</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#tts">English-to-French</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav> 
+          <header class="masthead bg-white text-left"> <!-- text-black 사용 가능 -->
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">FLowHigh: Towards Efficient and High-Quality Audio Super-Resolution with Single Step Flow Matching</h1>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap lead">&nbsp;</p>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0 font-italic">Jun-Hak Yun, Seung-Bin Kim, and Seong-Whan Lee</p>
+            </div>
+         </header>
+
+        <!-- Abstraction -->
+        <section class="page-section portfolio" id="abstract">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Abstract</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 ml-auto">
+                      <p class="pre-wrap lead">Audio super-resolution is challenging owing to its ill-posed nature. Recently, the application of diffusion models in audio super-resolution has shown promising results in alleviating this challenge. However, diffusion-based models have limitations, primarily the necessity for numerous sampling steps, which causes significantly increased latency when synthesizing high-quality audio samples. In this paper, we propose FLowHigh, a novel approach that integrates flow matching, a highly efficient generative model, into audio super-resolution. We also explore probability paths specially tailored for audio super-resolution, which effectively capture high-resolution audio distributions, thereby enhancing reconstruction quality. The proposed method generates high-fidelity, high-resolution audio through a single-step sampling process across various input sampling rates. The experimental results on the VCTK benchmark dataset demonstrate that FLowHigh achieves state-of-the-art performance in audio super-resolution, as evaluated by log-spectral distance and ViSQOL while maintaining computationally efficiency with only a single-step sampling process.</p>
+                      <p class="pre-wrap lead">&nbsp;</p>
+                      <p class="pre-wrap lead">Official implementation of FLowHigh: <a href="https://github.com/jjunak-yun/FLowHigh_code">https://github.com/jjunak-yun/FLowHigh_code</a></p>
+                      <p class="pre-wrap lead">FLowHigh was trained and evaluated on the VCTK dataset. 
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="page-section bg-primary text-white morb-0" id="sptoen">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block">16 kHz to 24 kHz</h2>
+ 
+                </div>
+
+                <div class="divider-custom divider-light">
+                    <p class="pre-wrap lead"></p>
+                        
+                </div>
+                <div class="row justify-content-center">
+                  <!-- About Section Content-->
+                  <div class="row">
+                      <div class="col-lg-12 ml-auto">
+                        <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                            <tbody>
+                              <tr>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
+                                  <p><em>Es una de las universidades más jóvenes de Polonia.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19730956_src.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>Reference (English)</strong></p>
+                                  <p><em>It is one of the youngest universities in Poland.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19730956_tgt.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>TranSentence (English)</strong></p>
+                                  <p><em>It is one of the youngest universities in Poland.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19730956_pred.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
+                                  <p><em>Las obras nunca se han recuperado.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19611281_src.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>Reference (English)</strong></p>
+                                  <p><em>Works have never been recovered. </em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19611281_tgt.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>TranSentence (English)</strong></p>
+                                  <p><em>The works have never been recovered.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19611281_pred.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
+                                  <p><em>Está dedicada a San Pedro de Verona.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19970211_src.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>Reference (English)</strong></p>
+                                  <p><em>It's dedicated to saint peter of verona.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19970211_tgt.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>TranSentence (English)</strong></p>
+                                  <p><em>It is dedicated to saint peter of verona.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19970211_pred.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
+                                  <p><em>Dos años más tarde, la empresa diversificó sus productos, y comenzó su internacionalización.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19839395_src.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>Reference (English)</strong></p>
+                                  <p><em>Two years later the company diversified its products and started globalizing.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19839395_tgt.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>TranSentence (English)</strong></p>
+                                  <p><em>Two years later the company diversified its products and started its internationalization.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19839395_pred.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
+                                  <p><em>Fue la segunda de nueve hermanos.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19607361_src.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>Reference (English)</strong></p>
+                                  <p><em>She was the second of nine siblings.</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19607361_tgt.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td><p><strong>TranSentence (English)</strong></p>
+                                  <p><em>She was the second of nine brothers</em></p>
+                                  <audio id="" controls >
+                                      <source id="" src="audio/es-en/common_voice_es_19607361_pred.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        <p> </p>
+                      </div>
+                  </div>  
+                    </div>
+                    </section>
+          
