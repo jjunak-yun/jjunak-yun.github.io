@@ -82,7 +82,7 @@
         <section class="page-section bg-primary text-white morb-0" id="16k">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block">16 kHz to 24 kHz</h2>
+                    <h2 class="page-section-heading d-inline-block">16 kHz   to   24 kHz</h2>
  
                 </div>
 
@@ -95,47 +95,61 @@
                   <div class="row">
                       <div class="col-lg-12 ml-auto">
                         <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                        
+                          <thead><tr>
+                            <th style="width: 10%"> Ground Truth </th>
+                            <th style="width: 10%"> Input Audio </th>
+                            <th style="width: 10%"> Nu-wave2 </th>
+                            <th style="width: 10%"> UDM+   </th>
+                            <th style="width: 10%"> FLowHigh(Euler) </th>
+                            <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                            <th style="width: 1%">  </th>
+                          </tr></thead>   
+                          
                             <tbody>
                               <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
-                                  <p><em>Es una de las universidades más jóvenes de Polonia.</em></p>
+
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Ground Truth</strong></p>
+                                  <p><em>p360_253</em></p>
                                   <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19730956_src.wav" type="audio/wav" />
+                                      <source id="" src="audio/16k/GT/p360_253.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td><p><strong>Reference (English)</strong></p>
-                                  <p><em>It is one of the youngest universities in Poland.</em></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Input Audio</strong></p>
+                                  <p><em>p360_253</em></p>
                                   <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19730956_tgt.wav" type="audio/wav" />
+                                      <source id="" src="audio/16k/input/p360_253.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td><p><strong>TranSentence (English)</strong></p>
-                                  <p><em>It is one of the youngest universities in Poland.</em></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Nu-wave2</strong></p>
+                                  <p><em>p360_253</em></p>
                                   <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19730956_pred.wav" type="audio/wav" />
+                                      <source id="" src="audio/16k/nuwave2/p360_253.wav" type="audio/wav" />
                                   </audio>
                                 </td>
                               </tr>
                               <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
-                                  <p><em>Las obras nunca se han recuperado.</em></p>
+
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>UDM+</strong></p>
+                                  <p><em>p360_253</em></p>
                                   <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19611281_src.wav" type="audio/wav" />
+                                      <source id="" src="audio/16k/udm+/p360_253.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td><p><strong>Reference (English)</strong></p>
-                                  <p><em>Works have never been recovered. </em></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                  <p><em>p360_253</em></p>
                                   <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19611281_tgt.wav" type="audio/wav" />
+                                      <source id="" src="audio/16k/FLowHigh_euler/p360_253.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td><p><strong>TranSentence (English)</strong></p>
-                                  <p><em>The works have never been recovered.</em></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                  <p><em>p360_253</em></p>
                                   <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19611281_pred.wav" type="audio/wav" />
+                                      <source id="" src="audio/16k/FLowHigh_mid/p360_253.wav" type="audio/wav" />
                                   </audio>
                                 </td>
                               </tr>
+
                               <tr>
                                 <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
                                   <p><em>Está dedicada a San Pedro de Verona.</em></p>
@@ -153,46 +167,6 @@
                                   <p><em>It is dedicated to saint peter of verona.</em></p>
                                   <audio id="" controls >
                                       <source id="" src="audio/es-en/common_voice_es_19970211_pred.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
-                                  <p><em>Dos años más tarde, la empresa diversificó sus productos, y comenzó su internacionalización.</em></p>
-                                  <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19839395_src.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-                                <td><p><strong>Reference (English)</strong></p>
-                                  <p><em>Two years later the company diversified its products and started globalizing.</em></p>
-                                  <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19839395_tgt.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-                                <td><p><strong>TranSentence (English)</strong></p>
-                                  <p><em>Two years later the company diversified its products and started its internationalization.</em></p>
-                                  <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19839395_pred.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Source (Spanish)</strong></p>
-                                  <p><em>Fue la segunda de nueve hermanos.</em></p>
-                                  <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19607361_src.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-                                <td><p><strong>Reference (English)</strong></p>
-                                  <p><em>She was the second of nine siblings.</em></p>
-                                  <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19607361_tgt.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-                                <td><p><strong>TranSentence (English)</strong></p>
-                                  <p><em>She was the second of nine brothers</em></p>
-                                  <audio id="" controls >
-                                      <source id="" src="audio/es-en/common_voice_es_19607361_pred.wav" type="audio/wav" />
                                   </audio>
                                 </td>
                               </tr>
