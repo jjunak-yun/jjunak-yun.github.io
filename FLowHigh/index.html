@@ -35,13 +35,13 @@
                   <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                   <div class="collapse navbar-collapse" id="navbarResponsive">
                       <ul class="navbar-nav ml-auto">
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#abstract">Abstract</a></li>
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#8k">8 kHz &rarr; 48 kHz </a></li>
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#12k">12 kHz &rarr; 48 kHz</a></li>
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#16k">16 kHz &rarr; 48 kHz</a></li>
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#24k">24 kHz &rarr; 48 kHz</a></li>
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#samplingsteps">Sampling Stpes</a></li>
-                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#pathanalysis">Conditional Path Analysis</a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#abstract">Abstract</a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#8k">8 kHz &rarr; 48 kHz </a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#12k">12 kHz &rarr; 48 kHz</a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#16k">16 kHz &rarr; 48 kHz</a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#24k">24 kHz &rarr; 48 kHz</a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#samplingsteps">Sampling Stpes</a></li>
+                          <li class="nav-item text-nowrap mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-4 rounded js-scroll-trigger" href="#pathanalysis">Conditional Path Analysis</a></li>
                       </ul>
                   </div>
               </div>
@@ -120,7 +120,7 @@
                                       <source id="" src="audio/8k/input/p364_055.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/recon_pp/p364_055.wav" type="audio/wav" />
@@ -143,13 +143,6 @@
                                   </audio>
                                 </td>
 
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                  <!-- <p><em>p360_253</em></p> -->
-                                  <audio id="" controls >
-                                      <source id="" src="audio/8k/fre-painter/p364_055.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-
                                 <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
@@ -160,13 +153,20 @@
                               </tr>
 
                               <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/8k/fre-painter/p364_055.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/FLowHigh_euler/p364_055.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/FLowHigh_mid/p364_055.wav" type="audio/wav" />
@@ -192,8 +192,8 @@
                             <th style="width: 10%"> Input Audio </th>
                             <th style="width: 10%"> Nu-wave2 </th>
                             <th style="width: 10%"> UDM+   </th>
-                            <th style="width: 10%"> FLowHigh(Euler) </th>
-                            <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                            <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                            <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                             <th style="width: 1%">  </th> -->
                           </tr></thead>   
                           
@@ -211,7 +211,7 @@
                                       <source id="" src="audio/8k/input/p376_159.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/recon_pp/p376_159.wav" type="audio/wav" />
@@ -225,39 +225,35 @@
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/nuwave2/p376_159.wav" type="audio/wav" />
                                   </audio>
-                                </td>
-                                
+                                </td>                            
                                 <td rowspan="1" style="vertical-align: top;"><p><strong>UDM+</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/udm+/p376_159.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                  <!-- <p><em>p360_253</em></p> -->
-                                  <audio id="" controls >
-                                      <source id="" src="audio/8k/fre-painter/p376_159.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-
                                 <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/mdctGAN/p376_159.wav" type="audio/wav" />
                                   </audio>
                                 </td>                                
-                                
                               </tr>
 
                               <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/8k/fre-painter/p376_159.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/FLowHigh_euler/p376_159.wav" type="audio/wav" />
                                   </audio>
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/FLowHigh_mid/p376_159.wav" type="audio/wav" />
@@ -304,8 +300,8 @@
                                       <th style="width: 10%"> Input Audio </th>
                                       <th style="width: 10%"> Nu-wave2 </th>
                                       <th style="width: 10%"> UDM+   </th>
-                                      <th style="width: 10%"> FLowHigh(Euler) </th>
-                                      <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                                      <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                                      <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                                       <th style="width: 1%">  </th> -->
                                     </tr></thead>   
                                     
@@ -323,7 +319,7 @@
                                                 <source id="" src="audio/12k/input/p361_281.wav" type="audio/wav" />
                                             </audio>
                                           </td>
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/recon_pp/p361_281.wav" type="audio/wav" />
@@ -338,21 +334,12 @@
                                                 <source id="" src="audio/12k/nuwave2/p361_281.wav" type="audio/wav" />
                                             </audio>
                                           </td>
-                                          
                                           <td rowspan="1" style="vertical-align: top;"><p><strong>UDM+</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/udm+/p361_281.wav" type="audio/wav" />
                                             </audio>
                                           </td>
-
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                            <!-- <p><em>p360_253</em></p> -->
-                                            <audio id="" controls >
-                                                <source id="" src="audio/12k/fre-painter/p361_281.wav" type="audio/wav" />
-                                            </audio>
-                                          </td>
-          
                                           <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
@@ -363,13 +350,19 @@
                                         </tr>
           
                                         <tr>
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                            <!-- <p><em>p360_253</em></p> -->
+                                            <audio id="" controls >
+                                                <source id="" src="audio/12k/fre-painter/p361_281.wav" type="audio/wav" />
+                                            </audio>
+                                          </td>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/FLowHigh_euler/p361_281.wav" type="audio/wav" />
                                             </audio>
                                           </td>
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/FLowHigh_mid/p361_281.wav" type="audio/wav" />
@@ -393,8 +386,8 @@
                                       <th style="width: 10%"> Input Audio </th>
                                       <th style="width: 10%"> Nu-wave2 </th>
                                       <th style="width: 10%"> UDM+   </th>
-                                      <th style="width: 10%"> FLowHigh(Euler) </th>
-                                      <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                                      <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                                      <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                                       <th style="width: 1%">  </th> -->
                                     </tr></thead>   
                                     
@@ -412,7 +405,7 @@
                                                 <source id="" src="audio/12k/input/p362_115.wav" type="audio/wav" />
                                             </audio>
                                           </td>
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/recon_pp/p362_115.wav" type="audio/wav" />
@@ -433,15 +426,7 @@
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/udm+/p362_115.wav" type="audio/wav" />
                                             </audio>
-                                          </td>
-
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                            <!-- <p><em>p360_253</em></p> -->
-                                            <audio id="" controls >
-                                                <source id="" src="audio/12k/fre-painter/p362_115.wav" type="audio/wav" />
-                                            </audio>
-                                          </td>
-          
+                                          </td>          
                                           <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
@@ -452,13 +437,19 @@
                                         </tr>
           
                                         <tr>
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                            <!-- <p><em>p360_253</em></p> -->
+                                            <audio id="" controls >
+                                                <source id="" src="audio/12k/fre-painter/p362_115.wav" type="audio/wav" />
+                                            </audio>
+                                          </td>                                          
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/FLowHigh_euler/p362_115.wav" type="audio/wav" />
                                             </audio>
                                           </td>
-                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/FLowHigh_mid/p362_115.wav" type="audio/wav" />
@@ -503,8 +494,8 @@
                             <th style="width: 10%"> Input Audio </th>
                             <th style="width: 10%"> Nu-wave2 </th>
                             <th style="width: 10%"> UDM+   </th>
-                            <th style="width: 10%"> FLowHigh(Euler) </th>
-                            <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                            <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                            <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                             <th style="width: 1%">  </th> -->
                           </tr></thead>   
                           
@@ -524,7 +515,7 @@
                                   </audio>
                                   <img src="img/16k/input/p360_253.png"  style="max-width: 100%; height: auto;">                                   
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/16k/recon_pp/p360_253.wav" type="audio/wav" />
@@ -548,14 +539,6 @@
                                   </audio>
                                   <img src="img/16k/udm+/p360_253.png"  style="max-width: 100%; height: auto;">
                                 </td>
-
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                  <!-- <p><em>p360_253</em></p> -->
-                                  <audio id="" controls >
-                                      <source id="" src="audio/16k/fre-painter/p360_253.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-
                                 <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
@@ -568,14 +551,20 @@
                               </tr>
 
                               <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/16k/fre-painter/p360_253.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/16k/FLowHigh_euler/p360_253.wav" type="audio/wav" />
                                   </audio>
                                   <img src="img/16k/FLowHigh_euler/p360_253.png"  style="max-width: 100%; height: auto;">
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/16k/FLowHigh_mid/p360_253.wav" type="audio/wav" />
@@ -598,8 +587,8 @@
                             <th style="width: 10%"> Input Audio </th>
                             <th style="width: 10%"> Nu-wave2 </th>
                             <th style="width: 10%"> UDM+   </th>
-                            <th style="width: 10%"> FLowHigh(Euler) </th>
-                            <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                            <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                            <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                             <th style="width: 1%">  </th> -->
                           </tr></thead>   
                           
@@ -619,7 +608,7 @@
                                   </audio>
                                   <img src="img/16k/input/p363_188.png"  style="max-width: 100%; height: auto;">                                   
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/16k/recon_pp/p363_188.wav" type="audio/wav" />
@@ -643,14 +632,6 @@
                                   </audio>
                                   <img src="img/16k/udm+/p363_188.png"  style="max-width: 100%; height: auto;">
                                 </td>
-
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                  <!-- <p><em>p360_253</em></p> -->
-                                  <audio id="" controls >
-                                      <source id="" src="audio/16k/fre-painter/p363_188.wav" type="audio/wav" />
-                                  </audio>
-                                </td>
-
                                 <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
@@ -661,14 +642,20 @@
                               </tr>
 
                               <tr>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/16k/fre-painter/p363_188.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                   <!-- <p><em>p363_188</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/16k/FLowHigh_euler/p363_188.wav" type="audio/wav" />
                                   </audio>
                                   <img src="img/16k/FLowHigh_euler/p363_188.png"  style="max-width: 100%; height: auto;">
                                 </td>
-                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                   <!-- <p><em>p363_188</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/16k/FLowHigh_mid/p363_188.wav" type="audio/wav" />
@@ -715,8 +702,8 @@
                                         <th style="width: 10%"> Input Audio </th>
                                         <th style="width: 10%"> Nu-wave2 </th>
                                         <th style="width: 10%"> UDM+   </th>
-                                        <th style="width: 10%"> FLowHigh(Euler) </th>
-                                        <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                                        <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                                        <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                                         <th style="width: 1%">  </th> -->
                                       </tr></thead>   
                                       
@@ -735,7 +722,7 @@
                                                   <source id="" src="audio/24k/input/p374_336.wav" type="audio/wav" />
                                               </audio>
                                             </td>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/recon_pp/p374_336.wav" type="audio/wav" />
@@ -756,14 +743,7 @@
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/udm+/p374_336.wav" type="audio/wav" />
                                               </audio>
-                                            </td>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                              <!-- <p><em>p360_253</em></p> -->
-                                              <audio id="" controls >
-                                                  <source id="" src="audio/24k/fre-painter/p374_336.wav" type="audio/wav" />
-                                              </audio>
-                                            </td>
-            
+                                            </td>           
                                             <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
@@ -773,13 +753,19 @@
                                           </tr>
             
                                           <tr>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                              <!-- <p><em>p360_253</em></p> -->
+                                              <audio id="" controls >
+                                                  <source id="" src="audio/24k/fre-painter/p374_336.wav" type="audio/wav" />
+                                              </audio>
+                                            </td>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/FLowHigh_euler/p374_336.wav" type="audio/wav" />
                                               </audio>
                                             </td>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/FLowHigh_mid/p374_336.wav" type="audio/wav" />
@@ -804,8 +790,8 @@
                                         <th style="width: 10%"> Input Audio </th>
                                         <th style="width: 10%"> Nu-wave2 </th>
                                         <th style="width: 10%"> UDM+   </th>
-                                        <th style="width: 10%"> FLowHigh(Euler) </th>
-                                        <th style="width: 10%"> FLowHigh(Midpoint) </th>
+                                        <th style="width: 10%"> FLowHigh<br>(Euler) </th>
+                                        <th style="width: 10%"> FLowHigh<br>(Midpoint) </th>
                                         <th style="width: 1%">  </th> -->
                                       </tr></thead>   
                                       
@@ -824,7 +810,7 @@
                                                   <source id="" src="audio/24k/input/p360_072.wav" type="audio/wav" />
                                               </audio>
                                             </td>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction<br>(w\ Post-processing)</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/recon_pp/p360_072.wav" type="audio/wav" />
@@ -839,52 +825,43 @@
                                                   <source id="" src="audio/24k/nuwave2/p360_072.wav" type="audio/wav" />
                                               </audio>
                                             </td>
-                                            
                                             <td rowspan="1" style="vertical-align: top;"><p><strong>UDM+</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/udm+/p360_072.wav" type="audio/wav" />
                                               </audio>
-                                            </td>
-
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
-                                              <!-- <p><em>p360_253</em></p> -->
-                                              <audio id="" controls >
-                                                  <source id="" src="audio/24k/fre-painter/p360_072.wav" type="audio/wav" />
-                                              </audio>
-                                            </td>
-            
+                                            </td>            
                                             <td rowspan="1" style="vertical-align: top;"><p><strong>mdctGAN</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/mdctGAN/p360_072.wav" type="audio/wav" />
                                               </audio>
                                             </td>  
-
                                           </tr>
             
                                           <tr>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Euler)</strong></p>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-painter</strong></p>
+                                              <!-- <p><em>p360_253</em></p> -->
+                                              <audio id="" controls >
+                                                  <source id="" src="audio/24k/fre-painter/p360_072.wav" type="audio/wav" />
+                                              </audio>
+                                            </td>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Euler)</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/FLowHigh_euler/p360_072.wav" type="audio/wav" />
                                               </audio>
                                             </td>
-                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh(Midpoint)</strong></p>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh<br>(Midpoint)</strong></p>
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/FLowHigh_mid/p360_072.wav" type="audio/wav" />
                                               </audio>
                                             </td>
                                           </tr>
-            
+
                                         </tbody>
-            
-                                      
-          
                                     </table>
-
-
 
                                   <p> </p>
                                 </div>
