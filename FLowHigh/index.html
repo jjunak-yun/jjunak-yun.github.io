@@ -35,13 +35,13 @@
                   <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                   <div class="collapse navbar-collapse" id="navbarResponsive">
                       <ul class="navbar-nav ml-auto">
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#abstract">Abstract</a></li>
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#8k">8 kHz</a></li>
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#12k">12 kHz</a></li>
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#16k">16 kHz</a></li>
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#24k">24 kHz</a></li>
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#samplingsteps">Sampling Stpes</a></li>
-                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#pathanalysis">Conditional Path Analysis</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#abstract">Abstract</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#8k">8 kHz &rarr; 48 kHz </a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#12k">12 kHz &rarr; 48 kHz</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#16k">16 kHz &rarr; 48 kHz</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#24k">24 kHz &rarr; 48 kHz</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#samplingsteps">Sampling Stpes</a></li>
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-2 px-lg-4 rounded js-scroll-trigger" href="#pathanalysis">Conditional Path Analysis</a></li>
                       </ul>
                   </div>
               </div>
@@ -53,13 +53,14 @@
                 <!-- Masthead Subheading-->
                 <p class="pre-wrap lead">&nbsp;</p>
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0 font-italic">Jun-Hak Yun, Seung-Bin Kim, and Seong-Whan Lee</p>
-                <img src="img/overview.png" alt="main" style="max-width: 100%; height: auto;"> 
+                <p class="pre-wrap lead">&nbsp;</p>
+                <img src="img/overview.png" alt="main" style="max-width: 130%; height: auto;"> 
                 <em>Overall framework of FLowHigh</em><p></p><br>
             </div>
          </header>
 
         <!-- Abstraction -->
-        <section class="page-section portfolio" id="abstract">
+        <section class="page-section portfolio bg-light" id="abstract">
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
@@ -103,13 +104,6 @@
                             <th style="width: 20%">   </th>
                             <th style="width: 20%">   </th>
                             <th style="width: 20%">   </th>
-                            <!-- <th style="width: 10%"> Ground Truth </th>
-                            <th style="width: 10%"> Input Audio </th>
-                            <th style="width: 10%"> Nu-wave2 </th>
-                            <th style="width: 10%"> UDM+   </th>
-                            <th style="width: 10%"> FLowHigh(Euler) </th>
-                            <th style="width: 10%"> FLowHigh(Midpoint) </th>
-                            <th style="width: 1%">  </th> -->
                           </tr></thead>   
                           
                             <tbody>
@@ -124,6 +118,12 @@
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/input/p364_055.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/8k/recon_pp/p364_055.wav" type="audio/wav" />
                                   </audio>
                                 </td>
                               </tr>
@@ -209,6 +209,12 @@
                                   <!-- <p><em>p360_253</em></p> -->
                                   <audio id="" controls >
                                       <source id="" src="audio/8k/input/p376_159.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/8k/recon_pp/p376_159.wav" type="audio/wav" />
                                   </audio>
                                 </td>
                               </tr>
@@ -317,6 +323,12 @@
                                                 <source id="" src="audio/12k/input/p361_281.wav" type="audio/wav" />
                                             </audio>
                                           </td>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                            <!-- <p><em>p360_253</em></p> -->
+                                            <audio id="" controls >
+                                                <source id="" src="audio/12k/recon_pp/p361_281.wav" type="audio/wav" />
+                                            </audio>
+                                          </td>
                                         </tr>
           
                                         <tr>
@@ -398,6 +410,12 @@
                                             <!-- <p><em>p360_253</em></p> -->
                                             <audio id="" controls >
                                                 <source id="" src="audio/12k/input/p362_115.wav" type="audio/wav" />
+                                            </audio>
+                                          </td>
+                                          <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                            <!-- <p><em>p360_253</em></p> -->
+                                            <audio id="" controls >
+                                                <source id="" src="audio/12k/recon_pp/p362_115.wav" type="audio/wav" />
                                             </audio>
                                           </td>
                                         </tr>
@@ -506,6 +524,12 @@
                                   </audio>
                                   <img src="img/16k/input/p360_253.png"  style="max-width: 100%; height: auto;">                                   
                                 </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/16k/recon_pp/p360_253.wav" type="audio/wav" />
+                                  </audio>
+                                </td>
                               </tr>
 
                               <tr>
@@ -594,6 +618,12 @@
                                       <source id="" src="audio/16k/input/p363_188.wav" type="audio/wav" />
                                   </audio>
                                   <img src="img/16k/input/p363_188.png"  style="max-width: 100%; height: auto;">                                   
+                                </td>
+                                <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                  <!-- <p><em>p360_253</em></p> -->
+                                  <audio id="" controls >
+                                      <source id="" src="audio/16k/recon_pp/p363_188.wav" type="audio/wav" />
+                                  </audio>
                                 </td>
                               </tr>
 
@@ -705,6 +735,12 @@
                                                   <source id="" src="audio/24k/input/p374_336.wav" type="audio/wav" />
                                               </audio>
                                             </td>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                              <!-- <p><em>p360_253</em></p> -->
+                                              <audio id="" controls >
+                                                  <source id="" src="audio/24k/recon_pp/p374_336.wav" type="audio/wav" />
+                                              </audio>
+                                            </td>
                                           </tr>
             
                                           <tr>
@@ -786,6 +822,12 @@
                                               <!-- <p><em>p360_253</em></p> -->
                                               <audio id="" controls >
                                                   <source id="" src="audio/24k/input/p360_072.wav" type="audio/wav" />
+                                              </audio>
+                                            </td>
+                                            <td rowspan="1" style="vertical-align: top;"><p><strong>GT Reconstruction(w\ Post-processing)</strong></p>
+                                              <!-- <p><em>p360_253</em></p> -->
+                                              <audio id="" controls >
+                                                  <source id="" src="audio/24k/recon_pp/p360_072.wav" type="audio/wav" />
                                               </audio>
                                             </td>
                                           </tr>
