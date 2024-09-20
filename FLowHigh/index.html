@@ -234,10 +234,10 @@
                             <th colspan="3"><p>Audio: p361_281 </p>
                               <div id="emo_button" class="col-lg-12 ml-auto">
                       <h7>Sampling rate</h7>
-            <input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p361_281');"/>
-            <input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p361_281');"/>
-            <input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p361_281');"/>
-            <input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p361_281');"/>
+            <input id="sr28000" type='button' value='8kHz' onclick="sr_click2(8000,'p361_281');"/>
+            <input id="sr212000" type='button' value='12kHz' onclick="sr_click2(12000,'p361_281');"/>
+            <input id="sr216000" type='button' value='16kHz' onclick="sr_click2(16000,'p361_281');"/>
+            <input id="sr224000" type='button' value='24kHz' onclick="sr_click2(24000,'p361_281');"/>
                     </div>
                               </tr>
                           </thead>
@@ -316,10 +316,10 @@
                             <th colspan="3"><p>Audio: p360_253 </p>
                               <div id="emo_button" class="col-lg-12 ml-auto">
                       <h7>Sampling rate</h7>
-            <input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p360_253');"/>
-            <input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p360_253');"/>
-            <input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p360_253');"/>
-            <input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p360_253');"/>
+            <input id="sr38000" type='button' value='8kHz' onclick="sr_click3(8000,'p360_253');"/>
+            <input id="sr312000" type='button' value='12kHz' onclick="sr_click3(12000,'p360_253');"/>
+            <input id="sr316000" type='button' value='16kHz' onclick="sr_click3(16000,'p360_253');"/>
+            <input id="sr324000" type='button' value='24kHz' onclick="sr_click3(24000,'p360_253');"/>
                     </div>
                               </tr>
                           </thead>
@@ -399,10 +399,10 @@
                             <th colspan="3"><p>Audio: p376_159 </p>
                               <div id="emo_button" class="col-lg-12 ml-auto">
                       <h7>Sampling rate</h7>
-            <input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p376_159');"/>
-            <input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p376_159');"/>
-            <input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p376_159');"/>
-            <input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p376_159');"/>
+            <input id="sr48000" type='button' value='8kHz' onclick="sr_click4(8000,'p376_159');"/>
+            <input id="sr412000" type='button' value='12kHz' onclick="sr_click4(12000,'p376_159');"/>
+            <input id="sr416000" type='button' value='16kHz' onclick="sr_click4(16000,'p376_159');"/>
+            <input id="sr424000" type='button' value='24kHz' onclick="sr_click4(24000,'p376_159');"/>
                     </div>
                               </tr>
                           </thead>
@@ -1086,32 +1086,39 @@
           var img_gt = "./audio/audiosr/gt/" + sr + png_name;
           var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
         
-          var img_source = "audio/audiosr/source/" + sr + png_name;
-          var src_source = "audio/audiosr/source/" + sr + wav_name;
-          
-          var img_voicefixer = "./audio/audiosr/voicefixer/" + sr + png_name;
-          var src_voicefixer = "./audio/audiosr/voicefixer/" + sr + wav_name;
+          var img_input = "audio/audiosr/input/" + sr + png_name;
+          var src_input = "audio/audiosr/input/" + sr + wav_name;
 
+          var img_reconstruction = "./audio/audiosr/reconstruction/" + sr + png_name;
+          var src_reconstruction = "./audio/audiosr/reconstruction/" + sr + wav_name;
+          
           var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
           var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
 
           var img_udm = "./audio/audiosr/udm/" + sr + png_name;
           var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
 
-          var img_random = "./audio/audiosr/random/" + sr + png_name;
-          var src_random = "./audio/audiosr/random/" + sr + wav_name;
+          var img_mdctgan = "./audio/audiosr/mdctgan/" + sr + png_name;
+          var src_mdctgan = "./audio/audiosr/mdctgan/" + sr + wav_name;
 
-          var img_fix = "./audio/audiosr/fix/" + sr + png_name;
-          var src_fix = "./audio/audiosr/fix/" + sr + wav_name;
+          var img_frepainter = "./audio/audiosr/frepainter/" + sr + png_name;
+          var src_frepainter = "./audio/audiosr/frepainter/" + sr + wav_name;
+
+          var img_euler = "./audio/audiosr/euler/" + sr + png_name;
+          var src_euler = "./audio/audiosr/euler/" + sr + wav_name;
+
+          var img_midpoint = "./audio/audiosr/midpoint/" + sr + png_name;
+          var src_midpoint = "./audio/audiosr/midpoint/" + sr + wav_name;
+
 
         console.log(img_gt)
         console.log(src_gt)
         
-        console.log(img_source)
-        console.log(src_source)
+        console.log(img_input)
+        console.log(src_input)
 
-        console.log(img_voicefixer)
-        console.log(src_voicefixer)
+        console.log(img_reconstruction)
+        console.log(src_reconstruction)
 
         console.log(img_nuwave2)
         console.log(src_nuwave2)
@@ -1119,27 +1126,32 @@
         console.log(img_udm)
         console.log(src_udm)
 
-        console.log(img_random)
-        console.log(src_random)
+        console.log(img_mdctgan)
+        console.log(src_mdctgan)
 
-        console.log(img_fix)
-        console.log(src_fix)
+        console.log(img_frepainter)
+        console.log(src_frepainter)
 
-        $('#asr_img_source').attr("src", img_source);
-        $('#asr_src_source').attr("src", src_source);
+        console.log(img_euler)
+        console.log(src_euler)
 
-        console.log($('#asr_src_source').val());
-        console.log($("#asr_source"))
-        $('#asr_source')[0].load();
+        console.log(img_midpoint)
+        console.log(src_midpoint)
 
 
-        $('#asr_img_voicefixer').attr("src", img_voicefixer);
-        $('#asr_src_voicefixer').attr("src", src_voicefixer);
+        $('#asr_img_input').attr("src", img_input);
+        $('#asr_src_input').attr("src", src_input);
 
-        console.log($('#asr_src_voicefixer').val());
-        console.log($("#asr_voicefixer"))
-        $('#asr_voicefixer')[0].load();
+        console.log($('#asr_src_input').val());
+        console.log($("#asr_input"))
+        $('#asr_input')[0].load();
 
+        $('#asr_img_reconstruction').attr("src", img_input);
+        $('#asr_src_reconstruction').attr("src", src_input);
+
+        console.log($('#asr_src_reconstruction').val());
+        console.log($("#asr_reconstruction"))
+        $('#asr_reconstruction')[0].load();
 
         $('#asr_img_nuwave2').attr("src", img_nuwave2);
         $('#asr_src_nuwave2').attr("src", src_nuwave2);
@@ -1156,21 +1168,35 @@
         console.log($("#asr_udm"))
         $('#asr_udm')[0].load();
       
-        $('#asr_img_random').attr("src", img_random);
-        $('#asr_src_random').attr("src", src_random);
 
-        console.log($('#asr_src_random').val());
-        console.log($("#asr_random"))
-        $('#asr_random')[0].load();
+        $('#asr_img_mdctgan').attr("src", img_mdctgan);
+        $('#asr_src_mdctgan').attr("src", src_mdctgan);
 
-        $('#asr_img_fix').attr("src", img_fix);
-        $('#asr_src_fix').attr("src", src_fix);
+        console.log($('#asr_src_mdctgan').val());
+        console.log($("#asr_mdctgan"))
+        $('#asr_mdctgan')[0].load();
+      
 
-        console.log($('#asr_src_random').val());
-        console.log($("#asr_fix"))
-        $('#asr_fix')[0].load();
+        $('#asr_img_frepainter').attr("src", img_frepainter);
+        $('#asr_src_frepainter').attr("src", src_frepainter);
 
+        console.log($('#asr_src_frepainter').val());
+        console.log($("#asr_frepainter"))
+        $('#asr_frepainter')[0].load();
+      
+        $('#asr_img_euler').attr("src", img_euler);
+        $('#asr_src_euler').attr("src", src_euler);
 
+        console.log($('#asr_src_euler').val());
+        console.log($("#asr_euler"))
+        $('#asr_euler')[0].load();
+      
+        $('#asr_img_midpoint').attr("src", img_midpoint);
+        $('#asr_src_midpoint').attr("src", src_midpoint);
+
+        console.log($('#asr_src_midpoint').val());
+        console.log($("#asr_midpoint"))
+        $('#asr_midpoint')[0].load();
               };
 
 
@@ -1200,32 +1226,39 @@
           var img_gt = "./audio/audiosr/gt/" + sr + png_name;
           var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
         
-          var img_source = "audio/audiosr/source/" + sr + png_name;
-          var src_source = "audio/audiosr/source/" + sr + wav_name;
-          
-          var img_voicefixer = "./audio/audiosr/voicefixer/" + sr + png_name;
-          var src_voicefixer = "./audio/audiosr/voicefixer/" + sr + wav_name;
+          var img_input = "audio/audiosr/input/" + sr + png_name;
+          var src_input = "audio/audiosr/input/" + sr + wav_name;
 
+          var img_reconstruction = "./audio/audiosr/reconstruction/" + sr + png_name;
+          var src_reconstruction = "./audio/audiosr/reconstruction/" + sr + wav_name;
+          
           var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
           var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
 
           var img_udm = "./audio/audiosr/udm/" + sr + png_name;
           var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
 
-          var img_random = "./audio/audiosr/random/" + sr + png_name;
-          var src_random = "./audio/audiosr/random/" + sr + wav_name;
+          var img_mdctgan = "./audio/audiosr/mdctgan/" + sr + png_name;
+          var src_mdctgan = "./audio/audiosr/mdctgan/" + sr + wav_name;
 
-          var img_fix = "./audio/audiosr/fix/" + sr + png_name;
-          var src_fix = "./audio/audiosr/fix/" + sr + wav_name;
+          var img_frepainter = "./audio/audiosr/frepainter/" + sr + png_name;
+          var src_frepainter = "./audio/audiosr/frepainter/" + sr + wav_name;
+
+          var img_euler = "./audio/audiosr/euler/" + sr + png_name;
+          var src_euler = "./audio/audiosr/euler/" + sr + wav_name;
+
+          var img_midpoint = "./audio/audiosr/midpoint/" + sr + png_name;
+          var src_midpoint = "./audio/audiosr/midpoint/" + sr + wav_name;
+
 
         console.log(img_gt)
         console.log(src_gt)
         
-        console.log(img_source)
-        console.log(src_source)
+        console.log(img_input)
+        console.log(src_input)
 
-        console.log(img_voicefixer)
-        console.log(src_voicefixer)
+        console.log(img_reconstruction)
+        console.log(src_reconstruction)
 
         console.log(img_nuwave2)
         console.log(src_nuwave2)
@@ -1233,22 +1266,32 @@
         console.log(img_udm)
         console.log(src_udm)
 
+        console.log(img_mdctgan)
+        console.log(src_mdctgan)
 
-        $('#asr_img_source2').attr("src", img_source);
-        $('#asr_src_source2').attr("src", src_source);
+        console.log(img_frepainter)
+        console.log(src_frepainter)
 
-        console.log($('#asr_src_source2').val());
-        console.log($("#asr_source2"))
-        $('#asr_source2')[0].load();
+        console.log(img_euler)
+        console.log(src_euler)
+
+        console.log(img_midpoint)
+        console.log(src_midpoint)
 
 
-        $('#asr_img_voicefixer2').attr("src", img_voicefixer);
-        $('#asr_src_voicefixer2').attr("src", src_voicefixer);
+        $('#asr_img_input2').attr("src", img_input);
+        $('#asr_src_input2').attr("src", src_input);
 
-        console.log($('#asr_src_voicefixer2').val());
-        console.log($("#asr_voicefixer2"))
-        $('#asr_voicefixer2')[0].load();
+        console.log($('#asr_src_input2').val());
+        console.log($("#asr_input2"))
+        $('#asr_input2')[0].load();
 
+        $('#asr_img_reconstruction2').attr("src", img_input);
+        $('#asr_src_reconstruction2').attr("src", src_input);
+
+        console.log($('#asr_src_reconstruction2').val());
+        console.log($("#asr_reconstruction2"))
+        $('#asr_reconstruction2')[0].load();
 
         $('#asr_img_nuwave22').attr("src", img_nuwave2);
         $('#asr_src_nuwave22').attr("src", src_nuwave2);
@@ -1264,25 +1307,37 @@
         console.log($('#asr_src_udm2').val());
         console.log($("#asr_udm2"))
         $('#asr_udm2')[0].load();
-
-        $('#asr_img_random2').attr("src", img_random);
-        $('#asr_src_random2').attr("src", src_random);
-
-        console.log($('#asr_src_random2').val());
-        console.log($("#asr_random2"))
-        $('#asr_random2')[0].load();
-
-        console.log(img_fix)
-        console.log(src_fix)
-
-        $('#asr_img_fix2').attr("src", img_fix);
-        $('#asr_src_fix2').attr("src", src_fix);
-
-        console.log($('#asr_src_random2').val());
-        console.log($("#asr_fix2"))
-        $('#asr_fix2')[0].load();
-
       
+
+        $('#asr_img_mdctgan2').attr("src", img_mdctgan);
+        $('#asr_src_mdctgan2').attr("src", src_mdctgan);
+
+        console.log($('#asr_src_mdctgan2').val());
+        console.log($("#asr_mdctgan2"))
+        $('#asr_mdctgan2')[0].load();
+      
+
+        $('#asr_img_frepainter2').attr("src", img_frepainter);
+        $('#asr_src_frepainter2').attr("src", src_frepainter);
+
+        console.log($('#asr_src_frepainter2').val());
+        console.log($("#asr_frepainter2"))
+        $('#asr_frepainter2')[0].load();
+      
+        $('#asr_img_euler2').attr("src", img_euler);
+        $('#asr_src_euler2').attr("src", src_euler);
+
+        console.log($('#asr_src_euler2').val());
+        console.log($("#asr_euler2"))
+        $('#asr_euler2')[0].load();
+      
+        $('#asr_img_midpoint2').attr("src", img_midpoint);
+        $('#asr_src_midpoint2').attr("src", src_midpoint);
+
+        console.log($('#asr_src_midpoint2').val());
+        console.log($("#asr_midpoint2"))
+        $('#asr_midpoint2')[0].load();
+
 
               };
             
@@ -1309,35 +1364,42 @@
 				
         sr = Number(sr);
         console.log(sr)
-        var img_gt = "./audio/audiosr/gt/" + sr + png_name;
-        var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
-      
-        var img_source = "audio/audiosr/source/" + sr + png_name;
-        var src_source = "audio/audiosr/source/" + sr + wav_name;
+          var img_gt = "./audio/audiosr/gt/" + sr + png_name;
+          var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
         
-        var img_voicefixer = "./audio/audiosr/voicefixer/" + sr + png_name;
-        var src_voicefixer = "./audio/audiosr/voicefixer/" + sr + wav_name;
+          var img_input = "audio/audiosr/input/" + sr + png_name;
+          var src_input = "audio/audiosr/input/" + sr + wav_name;
 
-        var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
-        var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
+          var img_reconstruction = "./audio/audiosr/reconstruction/" + sr + png_name;
+          var src_reconstruction = "./audio/audiosr/reconstruction/" + sr + wav_name;
+          
+          var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
+          var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
 
-        var img_udm = "./audio/audiosr/udm/" + sr + png_name;
-        var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
+          var img_udm = "./audio/audiosr/udm/" + sr + png_name;
+          var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
 
-        var img_random = "./audio/audiosr/random/" + sr + png_name;
-        var src_random = "./audio/audiosr/random/" + sr + wav_name;
+          var img_mdctgan = "./audio/audiosr/mdctgan/" + sr + png_name;
+          var src_mdctgan = "./audio/audiosr/mdctgan/" + sr + wav_name;
 
-        var img_fix = "./audio/audiosr/fix/" + sr + png_name;
-        var src_fix = "./audio/audiosr/fix/" + sr + wav_name;
+          var img_frepainter = "./audio/audiosr/frepainter/" + sr + png_name;
+          var src_frepainter = "./audio/audiosr/frepainter/" + sr + wav_name;
+
+          var img_euler = "./audio/audiosr/euler/" + sr + png_name;
+          var src_euler = "./audio/audiosr/euler/" + sr + wav_name;
+
+          var img_midpoint = "./audio/audiosr/midpoint/" + sr + png_name;
+          var src_midpoint = "./audio/audiosr/midpoint/" + sr + wav_name;
+
 
         console.log(img_gt)
         console.log(src_gt)
         
-        console.log(img_source)
-        console.log(src_source)
+        console.log(img_input)
+        console.log(src_input)
 
-        console.log(img_voicefixer)
-        console.log(src_voicefixer)
+        console.log(img_reconstruction)
+        console.log(src_reconstruction)
 
         console.log(img_nuwave2)
         console.log(src_nuwave2)
@@ -1345,22 +1407,32 @@
         console.log(img_udm)
         console.log(src_udm)
 
+        console.log(img_mdctgan)
+        console.log(src_mdctgan)
 
-        $('#asr_img_source3').attr("src", img_source);
-        $('#asr_src_source3').attr("src", src_source);
+        console.log(img_frepainter)
+        console.log(src_frepainter)
 
-        console.log($('#asr_src_source3').val());
-        console.log($("#asr_source3"))
-        $('#asr_source3')[0].load();
+        console.log(img_euler)
+        console.log(src_euler)
+
+        console.log(img_midpoint)
+        console.log(src_midpoint)
 
 
-        $('#asr_img_voicefixer3').attr("src", img_voicefixer);
-        $('#asr_src_voicefixer3').attr("src", src_voicefixer);
+        $('#asr_img_input3').attr("src", img_input);
+        $('#asr_src_input3').attr("src", src_input);
 
-        console.log($('#asr_src_voicefixer3').val());
-        console.log($("#asr_voicefixer3"))
-        $('#asr_voicefixer3')[0].load();
+        console.log($('#asr_src_input3').val());
+        console.log($("#asr_input3"))
+        $('#asr_input3')[0].load();
 
+        $('#asr_img_reconstruction3').attr("src", img_input);
+        $('#asr_src_reconstruction3').attr("src", src_input);
+
+        console.log($('#asr_src_reconstruction3').val());
+        console.log($("#asr_reconstruction3"))
+        $('#asr_reconstruction3')[0].load();
 
         $('#asr_img_nuwave23').attr("src", img_nuwave2);
         $('#asr_src_nuwave23').attr("src", src_nuwave2);
@@ -1377,22 +1449,36 @@
         console.log($("#asr_udm3"))
         $('#asr_udm3')[0].load();
       
-        $('#asr_img_random3').attr("src", img_random);
-        $('#asr_src_random3').attr("src", src_random);
 
-        console.log($('#asr_src_random3').val());
-        console.log($("#asr_random3"))
-        $('#asr_random3')[0].load();
+        $('#asr_img_mdctgan3').attr("src", img_mdctgan);
+        $('#asr_src_mdctgan3').attr("src", src_mdctgan);
 
-        console.log(img_fix)
-        console.log(src_fix)
+        console.log($('#asr_src_mdctgan3').val());
+        console.log($("#asr_mdctgan3"))
+        $('#asr_mdctgan3')[0].load();
+      
 
-        $('#asr_img_fix3').attr("src", img_fix);
-        $('#asr_src_fix3').attr("src", src_fix);
+        $('#asr_img_frepainter3').attr("src", img_frepainter);
+        $('#asr_src_frepainter3').attr("src", src_frepainter);
 
-        console.log($('#asr_src_random3').val());
-        console.log($("#asr_fix3"))
-        $('#asr_fix3')[0].load();
+        console.log($('#asr_src_frepainter3').val());
+        console.log($("#asr_frepainter3"))
+        $('#asr_frepainter3')[0].load();
+      
+        $('#asr_img_euler3').attr("src", img_euler);
+        $('#asr_src_euler3').attr("src", src_euler);
+
+        console.log($('#asr_src_euler3').val());
+        console.log($("#asr_euler3"))
+        $('#asr_euler3')[0].load();
+      
+        $('#asr_img_midpoint3').attr("src", img_midpoint);
+        $('#asr_src_midpoint3').attr("src", src_midpoint);
+
+        console.log($('#asr_src_midpoint3').val());
+        console.log($("#asr_midpoint3"))
+        $('#asr_midpoint3')[0].load();
+
 
               };
 
@@ -1420,35 +1506,42 @@
 				
         sr = Number(sr);
         console.log(sr)
-        var img_gt = "./audio/audiosr/gt/" + sr + png_name;
-        var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
-      
-        var img_source = "audio/audiosr/source/" + sr + png_name;
-        var src_source = "audio/audiosr/source/" + sr + wav_name;
+          var img_gt = "./audio/audiosr/gt/" + sr + png_name;
+          var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
         
-        var img_voicefixer = "./audio/audiosr/voicefixer/" + sr + png_name;
-        var src_voicefixer = "./audio/audiosr/voicefixer/" + sr + wav_name;
+          var img_input = "audio/audiosr/input/" + sr + png_name;
+          var src_input = "audio/audiosr/input/" + sr + wav_name;
 
-        var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
-        var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
+          var img_reconstruction = "./audio/audiosr/reconstruction/" + sr + png_name;
+          var src_reconstruction = "./audio/audiosr/reconstruction/" + sr + wav_name;
+          
+          var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
+          var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
 
-        var img_udm = "./audio/audiosr/udm/" + sr + png_name;
-        var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
+          var img_udm = "./audio/audiosr/udm/" + sr + png_name;
+          var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
 
-        var img_random = "./audio/audiosr/random/" + sr + png_name;
-        var src_random = "./audio/audiosr/random/" + sr + wav_name;
+          var img_mdctgan = "./audio/audiosr/mdctgan/" + sr + png_name;
+          var src_mdctgan = "./audio/audiosr/mdctgan/" + sr + wav_name;
 
-        var img_fix = "./audio/audiosr/fix/" + sr + png_name;
-        var src_fix = "./audio/audiosr/fix/" + sr + wav_name;
+          var img_frepainter = "./audio/audiosr/frepainter/" + sr + png_name;
+          var src_frepainter = "./audio/audiosr/frepainter/" + sr + wav_name;
+
+          var img_euler = "./audio/audiosr/euler/" + sr + png_name;
+          var src_euler = "./audio/audiosr/euler/" + sr + wav_name;
+
+          var img_midpoint = "./audio/audiosr/midpoint/" + sr + png_name;
+          var src_midpoint = "./audio/audiosr/midpoint/" + sr + wav_name;
+
 
         console.log(img_gt)
         console.log(src_gt)
         
-        console.log(img_source)
-        console.log(src_source)
+        console.log(img_input)
+        console.log(src_input)
 
-        console.log(img_voicefixer)
-        console.log(src_voicefixer)
+        console.log(img_reconstruction)
+        console.log(src_reconstruction)
 
         console.log(img_nuwave2)
         console.log(src_nuwave2)
@@ -1456,22 +1549,31 @@
         console.log(img_udm)
         console.log(src_udm)
 
+        console.log(img_mdctgan)
+        console.log(src_mdctgan)
 
-        $('#asr_img_source4').attr("src", img_source);
-        $('#asr_src_source4').attr("src", src_source);
+        console.log(img_frepainter)
+        console.log(src_frepainter)
 
-        console.log($('#asr_src_source4').val());
-        console.log($("#asr_source4"))
-        $('#asr_source4')[0].load();
+        console.log(img_euler)
+        console.log(src_euler)
 
+        console.log(img_midpoint)
+        console.log(src_midpoint)
 
-        $('#asr_img_voicefixer4').attr("src", img_voicefixer);
-        $('#asr_src_voicefixer4').attr("src", src_voicefixer);
+        $('#asr_img_input4').attr("src", img_input);
+        $('#asr_src_input4').attr("src", src_input);
 
-        console.log($('#asr_src_voicefixer4').val());
-        console.log($("#asr_voicefixer4"))
-        $('#asr_voicefixer4')[0].load();
+        console.log($('#asr_src_input4').val());
+        console.log($("#asr_input4"))
+        $('#asr_input4')[0].load();
 
+        $('#asr_img_reconstruction4').attr("src", img_input);
+        $('#asr_src_reconstruction4').attr("src", src_input);
+
+        console.log($('#asr_src_reconstruction4').val());
+        console.log($("#asr_reconstruction4"))
+        $('#asr_reconstruction4')[0].load();
 
         $('#asr_img_nuwave24').attr("src", img_nuwave2);
         $('#asr_src_nuwave24').attr("src", src_nuwave2);
@@ -1489,23 +1591,34 @@
         $('#asr_udm4')[0].load();
       
 
-        $('#asr_img_random4').attr("src", img_random);
-        $('#asr_src_random4').attr("src", src_random);
+        $('#asr_img_mdctgan4').attr("src", img_mdctgan);
+        $('#asr_src_mdctgan4').attr("src", src_mdctgan);
 
-        console.log($('#asr_src_random4').val());
-        console.log($("#asr_random4"))
-        $('#asr_random4')[0].load();
+        console.log($('#asr_src_mdctgan4').val());
+        console.log($("#asr_mdctgan4"))
+        $('#asr_mdctgan4')[0].load();
+      
 
-        console.log(img_fix)
-        console.log(src_fix)
+        $('#asr_img_frepainter4').attr("src", img_frepainter);
+        $('#asr_src_frepainter4').attr("src", src_frepainter);
 
-        $('#asr_img_fix4').attr("src", img_fix);
-        $('#asr_src_fix4').attr("src", src_fix);
+        console.log($('#asr_src_frepainter4').val());
+        console.log($("#asr_frepainter4"))
+        $('#asr_frepainter4')[0].load();
+      
+        $('#asr_img_euler4').attr("src", img_euler);
+        $('#asr_src_euler4').attr("src", src_euler);
 
-        console.log($('#asr_src_random4').val());
-        console.log($("#asr_fix4"))
-        $('#asr_fix4')[0].load();
+        console.log($('#asr_src_euler4').val());
+        console.log($("#asr_euler4"))
+        $('#asr_euler4')[0].load();
+      
+        $('#asr_img_midpoint4').attr("src", img_midpoint);
+        $('#asr_src_midpoint4').attr("src", src_midpoint);
 
+        console.log($('#asr_src_midpoint4').val());
+        console.log($("#asr_midpoint4"))
+        $('#asr_midpoint4')[0].load();
 
               };
 
@@ -1532,35 +1645,42 @@
 				
         sr = Number(sr);
         console.log(sr)
-        var img_gt = "./audio/audiosr/gt/" + sr + png_name;
-        var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
-      
-        var img_source = "audio/audiosr/source/" + sr + png_name;
-        var src_source = "audio/audiosr/source/" + sr + wav_name;
+          var img_gt = "./audio/audiosr/gt/" + sr + png_name;
+          var src_gt = "./audio/audiosr/gt/" + sr + wav_name;
         
-        var img_voicefixer = "./audio/audiosr/voicefixer/" + sr + png_name;
-        var src_voicefixer = "./audio/audiosr/voicefixer/" + sr + wav_name;
+          var img_input = "audio/audiosr/input/" + sr + png_name;
+          var src_input = "audio/audiosr/input/" + sr + wav_name;
 
-        var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
-        var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
+          var img_reconstruction = "./audio/audiosr/reconstruction/" + sr + png_name;
+          var src_reconstruction = "./audio/audiosr/reconstruction/" + sr + wav_name;
+          
+          var img_nuwave2 = "./audio/audiosr/nuwave2/" + sr + png_name;
+          var src_nuwave2 = "./audio/audiosr/nuwave2/" + sr + wav_name;
 
-        var img_udm = "./audio/audiosr/udm/" + sr + png_name;
-        var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
+          var img_udm = "./audio/audiosr/udm/" + sr + png_name;
+          var src_udm = "./audio/audiosr/udm/" + sr + wav_name;
 
-        var img_random = "./audio/audiosr/random/" + sr + png_name;
-        var src_random = "./audio/audiosr/random/" + sr + wav_name;
+          var img_mdctgan = "./audio/audiosr/mdctgan/" + sr + png_name;
+          var src_mdctgan = "./audio/audiosr/mdctgan/" + sr + wav_name;
 
-        var img_fix = "./audio/audiosr/fix/" + sr + png_name;
-        var src_fix = "./audio/audiosr/fix/" + sr + wav_name;
+          var img_frepainter = "./audio/audiosr/frepainter/" + sr + png_name;
+          var src_frepainter = "./audio/audiosr/frepainter/" + sr + wav_name;
+
+          var img_euler = "./audio/audiosr/euler/" + sr + png_name;
+          var src_euler = "./audio/audiosr/euler/" + sr + wav_name;
+
+          var img_midpoint = "./audio/audiosr/midpoint/" + sr + png_name;
+          var src_midpoint = "./audio/audiosr/midpoint/" + sr + wav_name;
+
 
         console.log(img_gt)
         console.log(src_gt)
         
-        console.log(img_source)
-        console.log(src_source)
+        console.log(img_input)
+        console.log(src_input)
 
-        console.log(img_voicefixer)
-        console.log(src_voicefixer)
+        console.log(img_reconstruction)
+        console.log(src_reconstruction)
 
         console.log(img_nuwave2)
         console.log(src_nuwave2)
@@ -1568,22 +1688,32 @@
         console.log(img_udm)
         console.log(src_udm)
 
+        console.log(img_mdctgan)
+        console.log(src_mdctgan)
 
-        $('#asr_img_source5').attr("src", img_source);
-        $('#asr_src_source5').attr("src", src_source);
+        console.log(img_frepainter)
+        console.log(src_frepainter)
 
-        console.log($('#asr_src_source5').val());
-        console.log($("#asr_source5"))
-        $('#asr_source5')[0].load();
+        console.log(img_euler)
+        console.log(src_euler)
+
+        console.log(img_midpoint)
+        console.log(src_midpoint)
 
 
-        $('#asr_img_voicefixer5').attr("src", img_voicefixer);
-        $('#asr_src_voicefixer5').attr("src", src_voicefixer);
+        $('#asr_img_input5').attr("src", img_input);
+        $('#asr_src_input5').attr("src", src_input);
 
-        console.log($('#asr_src_voicefixer5').val());
-        console.log($("#asr_voicefixer5"))
-        $('#asr_voicefixer5')[0].load();
+        console.log($('#asr_src_input5').val());
+        console.log($("#asr_input5"))
+        $('#asr_input5')[0].load();
 
+        $('#asr_img_reconstruction5').attr("src", img_input);
+        $('#asr_src_reconstruction5').attr("src", src_input);
+
+        console.log($('#asr_src_reconstruction5').val());
+        console.log($("#asr_reconstruction5"))
+        $('#asr_reconstruction5')[0].load();
 
         $('#asr_img_nuwave25').attr("src", img_nuwave2);
         $('#asr_src_nuwave25').attr("src", src_nuwave2);
@@ -1600,22 +1730,35 @@
         console.log($("#asr_udm5"))
         $('#asr_udm5')[0].load();
       
-        $('#asr_img_random5').attr("src", img_random);
-        $('#asr_src_random5').attr("src", src_random);
 
-        console.log($('#asr_src_random5').val());
-        console.log($("#asr_random5"))
-        $('#asr_random5')[0].load();
+        $('#asr_img_mdctgan5').attr("src", img_mdctgan);
+        $('#asr_src_mdctgan5').attr("src", src_mdctgan);
 
-        console.log(img_fix)
-        console.log(src_fix)
+        console.log($('#asr_src_mdctgan5').val());
+        console.log($("#asr_mdctgan5"))
+        $('#asr_mdctgan5')[0].load();
+      
 
-        $('#asr_img_fix5').attr("src", img_fix);
-        $('#asr_src_fix5').attr("src", src_fix);
+        $('#asr_img_frepainter5').attr("src", img_frepainter);
+        $('#asr_src_frepainter5').attr("src", src_frepainter);
 
-        console.log($('#asr_src_random5').val());
-        console.log($("#asr_fix5"))
-        $('#asr_fix5')[0].load();
+        console.log($('#asr_src_frepainter5').val());
+        console.log($("#asr_frepainter5"))
+        $('#asr_frepainter5')[0].load();
+      
+        $('#asr_img_euler5').attr("src", img_euler);
+        $('#asr_src_euler5').attr("src", src_euler);
+
+        console.log($('#asr_src_euler5').val());
+        console.log($("#asr_euler5"))
+        $('#asr_euler5')[0].load();
+      
+        $('#asr_img_midpoint5').attr("src", img_midpoint);
+        $('#asr_src_midpoint5').attr("src", src_midpoint);
+
+        console.log($('#asr_src_midpoint5').val());
+        console.log($("#asr_midpoint5"))
+        $('#asr_midpoint5')[0].load();
 
               };        
 
