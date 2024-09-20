@@ -23,7 +23,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================= */
-.slider {
+ .slider {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -177,7 +177,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #4f2d66;
+  background-color: #337ab7;
   background-image: -webkit-linear-gradient(top, #149bdf 0%, #0480be 100%);
   background-image: -o-linear-gradient(top, #149bdf 0%, #0480be 100%);
   background-image: linear-gradient(to bottom, #149bdf 0%, #0480be 100%);
