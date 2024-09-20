@@ -18,17 +18,20 @@
 
 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="FLowHigh audio demo page">
-        <meta name="author" content="FLowHigh">
-        <title>FLowHigh Demo</title>
-
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Fre-Painter Demo</title>
+        <!-- Font Awesome icons (free version)-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet">
+        <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
+        <!-- Bootstrap slider CSS -->
+        <!-- <link rel="stylesheet" href="css/bootstrap-slider.css"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" integrity="sha512-3q8fi8M0VS+X/3n64Ndpp6Bit7oXSiyCnzmlx6IDBLGlY5euFySyJ46RUlqIVs0DPCGOypqP8IRk/EyPvU28mQ==" crossorigin="anonymous" />
     </head>
-    
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Audio Demos</a>
@@ -37,9 +40,9 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#abstract">Abstract</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#audiblefrequency">Audible Frequency</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#FLowHigh">FLowHigh</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#steps">Sampling Steps</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#path">Path Analysis</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#audiosr">Fre-Painter</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ablation">Ablation Study</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#tts">Speech Synthesis</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,10 +50,10 @@
         <header class="masthead bg-white text-left"> <!-- text-black 사용 가능 -->
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0">FLowHigh: Towards Efficient and High-Quality Audio Super-Resolution with Single Step Flow Matching</h1>
+                <h1 class="masthead-heading mb-0">Audio Super-resolution with Robust Speech Representation Learning of Masked Autoencoder</h1>
                 <!-- Masthead Subheading-->
                 <p class="pre-wrap lead">&nbsp;</p>
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0 font-italic">Jun-Hak Yun, Seung-Bin Kim, and Seong-Whan Lee</p>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0 font-italic">Seung-Bin Kim, Sang-Hoon Lee, Ha-Yeong Choi, and Seong-Whan Lee</p>
             </div>
         </header>
 
@@ -68,16 +71,16 @@
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
                     <div class="col-lg-12 ml-auto">
-                      <p class="pre-wrap lead">Audio super-resolution is challenging owing to its ill-posed nature. Recently, the application of diffusion models in audio super-resolution has shown promising results in alleviating this challenge. However, diffusion-based models have limitations, primarily the necessity for numerous sampling steps, which causes significantly increased latency when synthesizing high-quality audio samples. In this paper, we propose FLowHigh, a novel approach that integrates flow matching, a highly efficient generative model, into audio super-resolution. We also explore probability paths specially tailored for audio super-resolution, which effectively capture high-resolution audio distributions, thereby enhancing reconstruction quality. The proposed method generates high-fidelity, high-resolution audio through a single-step sampling process across various input sampling rates. The experimental results on the VCTK benchmark dataset demonstrate that FLowHigh achieves state-of-the-art performance in audio super-resolution, as evaluated by log-spectral distance and ViSQOL while maintaining computationally efficiency with only a single-step sampling process.</p>
+                      <p class="pre-wrap lead">This paper proposes Fre-Painter, a high-fidelity audio super-resolution system that utilizes robust speech representation learning with various masking strategies. Recently, masked autoencoders have been found to be beneficial in learning robust representations of audio for speech classification tasks. Following these studies, we leverage these representations and investigate several masking strategies for neural audio super-resolution. In this paper, we propose an upper-band masking strategy with the initialization of the mask token, which is simple but efficient for audio super-resolution. Furthermore, we propose a mix-ratio masking strategy that makes the model robust for input speech with various sampling rates. For practical applicability, we extend Fre-Painter to a text-to-speech system, which synthesizes high-resolution speech using low-resolution speech data. The experimental results demonstrate that Fre-Painter outperforms other neural audio super-resolution models.</p>
                       <p class="pre-wrap lead">&nbsp;</p>
-                      <p class="pre-wrap lead">Official implementation of FLowHigh: <a href="https://github.com/jjunak-yun/FLowHigh_code">https://github.com/jjunak-yun/FLowHigh_code</a></p>
-                      <p class="pre-wrap lead">FLowHigh was trained and evaluated on the VCTK dataset.
-                        <p class="pre-wrap lead">&nbsp;</p>
-                        <p class="pre-wrap lead">We compared FLowHigh with several audio super-resolution models as: </p>
-                      <p class="pre-wrap lead">1. NU-Wave2 [<a href="https://github.com/mindslab-ai/nuwave2">Code</a>][<a href="https://mindslab-ai.github.io/nuwave2/">Demo page</a>]</p>
-                      <p class="pre-wrap lead">2. UDM+ [<a href="https://github.com/yoyololicon/diffwave-sr">Code</a>][<a href="https://yoyololicon.github.io/diffwave-sr/">Demo page</a>]</p>
-                      <p class="pre-wrap lead">3. mdctGAN [<a href="https://github.com/neoncloud/mdctGAN">Code</a>]</p>
-                      <p class="pre-wrap lead">4. Fre-Painter [<a href="https://github.com/FrePainter/code">Code</a>][<a href="https://frepainter.github.io/demo/">Demo page</a>]</p>
+                      <p class="pre-wrap lead">&nbsp;</p>
+                      <p class="pre-wrap lead">Official implementation of Fre-Painter: <a href="https://github.com/FrePainter/code">https://github.com/FrePainter/code</a></p>
+                      <p class="pre-wrap lead">We compared Fre-Painter with several audio super-resolution models as: </p>
+                      <p class="pre-wrap lead">1. VoiceFixer [<a href="https://github.com/haoheliu/voicefixer_main">Code</a>][<a href="https://haoheliu.github.io/demopage-voicefixer/#head_2_2_1">Demo page</a>]</p>
+                      <p class="pre-wrap lead">2. NU-Wave 2 [<a href="https://github.com/mindslab-ai/nuwave2">Code</a>][<a href="https://mindslab-ai.github.io/nuwave2/">Demo page</a>]</p>
+                      <p class="pre-wrap lead">3. UDM+ [<a href="https://github.com/yoyololicon/diffwave-sr">Code</a>][<a href="https://yoyololicon.github.io/diffwave-sr/">Demo page</a>]</p>
+    
+    
                     </div>
                 </div>
             </div>
@@ -91,7 +94,7 @@
                 </div>
 
                 <div class="divider-custom divider-light">
-                    <p class="pre-wrap lead">We recommend conducting a brief frequency test to ensure precise listening.</p>
+                    <p class="pre-wrap lead">For more accurate listening, it is recommended to conduct a simple audible frequency test.</p>
                         
                 </div>
                 <div class="row text-center">
@@ -105,17 +108,17 @@
                           <h9>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</h9>
 
                           <br>
-                          <p style="color:red;">WARNING: LOUD HIGH-FREQUENCY SOUNDS MAY RESULT IN UNCOMFORTABLE OR PAINFUL SENSATIONS.</p>
+                          <p style="color:red;">WARNING: HIGH-FREQUENCY SAMPLES WITH LOUD VOLUME MAY HAVE PAINFUL SOUNDS.</p>
                           <span id="test-val1">2000 Hz  </span>&nbsp;&nbsp;
                           <input id="test_sr" type="input" data-slider-min="2000" data-slider-max="22000"
-                               data-slider-step="2000" data-slider-value="2000" data-slider-enabled="true"/>&nbsp;&nbsp;
+                               data-slider-step="2000" data-slider-value="0" data-slider-enabled="true"/>&nbsp;&nbsp;
                           <span id="test-val2">22000 Hz</span>
                           <br>
                           <audio id="audio_panel" controls >
-                            <source id="test_audio_src" src="audio/test/2000.wav" type="audio/wav" />
+                            <source id="test_audio_src" src="audio/test/1000.wav" type="audio/wav" />
                           </audio>  
                           <br>
-                          <img id="test_img_source" src="audio/test/2000.png" width="50%">
+                          <img id="test_img_source" src="audio/test/1000.png" width="50%">
                           <br>
                           <h9>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</h9>
                         </div>
@@ -129,17 +132,17 @@
                     </div>
                     </section>
 
-        <section class="page-section bg-info text-white mb-0" id="FLowHigh">
+        <section class="page-section bg-info text-white mb-0" id="audiosr">
             <div class="container">
                 <!-- About Section Heading-->
                 <div class="text-center">
-                  <h2 class="page-section-heading d-inline-block text-white">FLowHigh</h2>
+                  <h2 class="page-section-heading d-inline-block text-white">Fre-Painter</h2>
                                         <p class="pre-wrap lead"></p>
                 </div>
                 
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
-                  <p class="pre-wrap lead">For a fair comparison, we used the official implementations and provided checkpoints of the comparison models. Additionally, the demo samples were randomly extracted from the test set. Diffusion-based models, Nu-Wave2 and UDM+, generated audio samples using 50 sampling steps to achieve adequate sound quality. You can listen audio samples with a sampling rate of 48 kHz, generated from input sampling rates ranging from 8 kHz to 24 kHz.</p>
+                  <p class="pre-wrap lead">For a fair comparison, we used the official implementations and provided checkpoints of the comparison models. Additionally, the demo samples were randomly extracted from the test set. Fre-Painter (fix) was further experimented with by training it with fixed masking ratios for input sampling rates of 16 kHz and 24 kHz. Please note that VoiceFixer was trained with a target sampling rate of 44.1 kHz, while NU-Wave 2 and UDM+ were trained with an input sampling rate in the range from 6 kHz to 48 kHz.</p>
                      
                 </div>
                 <div class="row justify-content-center">
@@ -149,13 +152,15 @@
                       <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
                           <thead>
                             <tr>
-                              <th colspan="3"><p>Audio: p364_055 </p>
+                              <th colspan="3"><p><em>Audio: p360_418 </em></p>
                                 <div id="emo_button" class="col-lg-12 ml-auto">
                         <h7>Sampling rate</h7>
-						<input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p364_055');"/>
-						<input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p364_055');"/>
-						<input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p364_055');"/>
-						<input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p364_055');"/>
+						<input id="sr2000" type='button' value='2kHz' onclick="sr_click(2000,'p360_418');"/>
+						<input id="sr4000" type='button' value='4kHz' onclick="sr_click(4000,'p360_418');"/>
+						<input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p360_418');"/>
+						<input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p360_418');"/>
+						<input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p360_418');"/>
+						<input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p360_418');"/>
                     </div>
                               </tr>
                           </thead>
@@ -163,56 +168,126 @@
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
                                 <audio id="asr_gt" controls >
-                                    <source id="asr_src_gt" src="audio/audiosr/gt/8000/p364_055.wav" type="audio/wav" />
+                                    <source id="asr_src_gt" src="audio/audiosr/gt/2000/p360_418.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_gt" src="audio/audiosr/gt/8000/p364_055.png" width="100%">
+                                <img id="asr_img_gt" src="audio/audiosr/gt/2000/p360_418.png" width="100%">
                               </td>
                               <td><p><strong>Input</strong></p>
                                 <audio id="asr_source" controls >
-                                    <source id="asr_src_source" src="audio/audiosr/input/8000/p364_055.wav" type="audio/wav" />
+                                    <source id="asr_src_source" src="audio/audiosr/source/2000/p360_418.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_source" src="audio/audiosr/input/8000/p364_055.png" width="100%">
+                                <img id="asr_img_source" src="audio/audiosr/source/2000/p360_418.png" width="100%">
                               </td>
                             </tr>
                             <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>NU-Wave2</strong></p>
-                                <audio id="asr_nuwave2" controls >
-                                    <source id="asr_src_nuwave2" src="audio/audiosr/nuwave2/8000/p364_055.wav" type="audio/wav" />
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>VoiceFixer</strong></p>
+                                <audio id="asr_voicefixer" controls >
+                                    <source id="asr_src_voicefixer" src="audio/audiosr/voicefixer/2000/p360_418.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_nuwave2" src="audio/audiosr/nuwave2/8000/p364_055.png" width="100%">
+                                <img id="asr_img_voicefixer" src="audio/audiosr/voicefixer/2000/p360_418.png" width="100%">
+                              </td>
+                              <td><p><strong>NU-Wave 2</strong></p>
+                                <audio id="asr_nuwave2" controls >
+                                    <source id="asr_src_nuwave2" src="audio/audiosr/nuwave2/2000/p360_418.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_nuwave2" src="audio/audiosr/nuwave2/2000/p360_418.png" width="100%">
                               </td>
                               <td><p><strong>UDM+</strong></p>
                                 <audio id="asr_udm" controls >
-                                    <source id="asr_src_udm" src="audio/audiosr/udm/8000/p364_055.wav" type="audio/wav" />
+                                    <source id="asr_src_udm" src="audio/audiosr/udm/2000/p360_418.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_udm" src="audio/audiosr/udm/8000/p364_055.png" width="100%">
-                              </td>
-                              <td><p><strong>mdctGAN</strong></p>
-                                <audio id="asr_mdctgan" controls >
-                                    <source id="asr_src_mdctgan" src="audio/audiosr/mdctgan/8000/p364_055.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_mdctgan" src="audio/audiosr/mdctgan/8000/p364_055.png" width="100%">
+                                <img id="asr_img_udm" src="audio/audiosr/udm/2000/p360_418.png" width="100%">
                               </td>
                             </tr>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter</strong></p>
-                                <audio id="asr_frepainter" controls >
-                                    <source id="asr_src_frepainter" src="audio/audiosr/frepainter/8000/p364_055.wav" type="audio/wav" />
+                                <audio id="asr_random" controls >
+                                    <source id="asr_src_random" src="audio/audiosr/random/2000/p360_418.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_frepainter" src="audio/audiosr/frepainter/8000/p364_055.png" width="100%">
+                                <img id="asr_img_random" src="audio/audiosr/random/2000/p360_418.png" width="100%">
                               </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Euler, NFE=1)</strong></p>
-                                <audio id="asr_euler" controls >
-                                    <source id="asr_src_euler" src="audio/audiosr/euler/8000/p364_055.wav" type="audio/wav" />
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter (fixed)</strong></p>
+                                <audio id="asr_fix" controls >
+                                    <source id="asr_src_fix" src="audio/audiosr/fix/2000/p360_418.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_euler" src="audio/audiosr/euler/8000/p364_055.png" width="100%">
+                                <img id="asr_img_fix" src="audio/audiosr/fix/2000/p360_418.png" width="100%">
                               </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Midpoint, NFE=2)</strong></p>
-                                <audio id="asr_midpoint" controls >
-                                    <source id="asr_src_midpoint" src="audio/audiosr/midpoint/8000/p364_055.wav" type="audio/wav" />
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      <p> </p>
+                    </div>
+                </div>  
+
+
+                <div class="row">
+                    <div class="col-lg-12 ml-auto">
+                      <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                          <thead>
+                            <tr>
+                              <th colspan="3"><p><em>Audio: p361_340 </em></p>
+                                <div id="emo_button" class="col-lg-12 ml-auto">
+                        <h7>Sampling rate</h7>
+						<input id="sr22000" type='button' value='2kHz' onclick="sr_click2(2000,'p361_340');"/>
+						<input id="sr24000" type='button' value='4kHz' onclick="sr_click2(4000,'p361_340');"/>
+						<input id="sr28000" type='button' value='8kHz' onclick="sr_click2(8000,'p361_340');"/>
+						<input id="sr212000" type='button' value='12kHz' onclick="sr_click2(12000,'p361_340');"/>
+						<input id="sr216000" type='button' value='16kHz' onclick="sr_click2(16000,'p361_340');"/>
+            <input id="sr224000" type='button' value='24kHz' onclick="sr_click2(24000,'p361_340');"/>
+                    </div>
+                              <!--<p><em>When a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow.</em></p></th>-->
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
+                                <audio id="asr_gt2" controls >
+                                    <source id="asr_src_gt2" src="audio/audiosr/gt/2000/p361_340.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_midpoint" src="audio/audiosr/midpoint/8000/p364_055.png" width="100%">
+                                <img id="asr_img_gt2" src="audio/audiosr/gt/2000/p361_340.png" width="100%">
                               </td>
+                              <td><p><strong>Input</strong></p>
+                                <audio id="asr_source2" controls >
+                                    <source id="asr_src_source2" src="audio/audiosr/source/2000/p361_340.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_source2" src="audio/audiosr/source/2000/p361_340.png" width="100%">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>VoiceFixer</strong></p>
+                                <audio id="asr_voicefixer2" controls >
+                                    <source id="asr_src_voicefixer2" src="audio/audiosr/voicefixer/2000/p361_340.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_voicefixer2" src="audio/audiosr/voicefixer/2000/p361_340.png" width="100%">
+                              </td>
+                              <td><p><strong>NU-Wave 2</strong></p>
+                                <audio id="asr_nuwave22" controls >
+                                    <source id="asr_src_nuwave22" src="audio/audiosr/nuwave2/2000/p361_340.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_nuwave22" src="audio/audiosr/nuwave2/2000/p361_340.png" width="100%">
+                              </td>
+                              <td><p><strong>UDM+</strong></p>
+                                <audio id="asr_udm2" controls >
+                                    <source id="asr_src_udm2" src="audio/audiosr/udm/2000/p361_340.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_udm2" src="audio/audiosr/udm/2000/p361_340.png" width="100%">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter</strong></p>
+                                <audio id="asr_random2" controls >
+                                    <source id="asr_src_random2" src="audio/audiosr/random/2000/p361_340.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_random2" src="audio/audiosr/random/2000/p361_340.png" width="100%">
+                              </td>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter (fixed)</strong></p>
+                                <audio id="asr_fix2" controls >
+                                    <source id="asr_src_fix2" src="audio/audiosr/fix/2000/p361_340.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_fix2" src="audio/audiosr/fix/2000/p361_340.png" width="100%">
+                              </td>
+                              <td></td>
                             </tr>
                           </tbody>
                         </table>
@@ -221,235 +296,152 @@
                 </div>  
 
                 <div class="row">
-                  <div class="col-lg-12 ml-auto">
-                    <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
-                        <thead>
-                          <tr>
-                            <th colspan="3"><p>Audio: p361_281 </p>
-                              <div id="emo_button" class="col-lg-12 ml-auto">
-                      <h7>Sampling rate</h7>
-            <input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p361_281');"/>
-            <input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p361_281');"/>
-            <input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p361_281');"/>
-            <input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p361_281');"/>
+                    <div class="col-lg-12 ml-auto">
+                      <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                          <thead>
+                            <tr>
+                              <th colspan="3"><p><em>Audio: p374_137 </em></p>
+                                <div id="emo_button" class="col-lg-12 ml-auto">
+                        <h7>Sampling rate</h7>
+						<input id="sr32000" type='button' value='2kHz' onclick="sr_click3(2000,'p374_137');"/>
+						<input id="sr34000" type='button' value='4kHz' onclick="sr_click3(4000,'p374_137');"/>
+						<input id="sr38000" type='button' value='8kHz' onclick="sr_click3(8000,'p374_137');"/>
+						<input id="sr312000" type='button' value='12kHz' onclick="sr_click3(12000,'p374_137');"/>
+						<input id="sr316000" type='button' value='16kHz' onclick="sr_click3(16000,'p374_137');"/>
+            <input id="sr324000" type='button' value='24kHz' onclick="sr_click3(24000,'p374_137');"/>
                     </div>
-                              </tr>
+                              <!--<p><em>When a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow.</em></p></th>-->
+                            </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
-                                <audio id="asr_gt" controls >
-                                    <source id="asr_src_gt" src="audio/audiosr/gt/8000/p361_281.wav" type="audio/wav" />
+                                <audio id="asr_gt3" controls >
+                                    <source id="asr_src_gt3" src="audio/audiosr/gt/2000/p374_137.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_gt" src="audio/audiosr/gt/8000/p361_281.png" width="100%">
+                                <img id="asr_img_gt3" src="audio/audiosr/gt/2000/p374_137.png" width="100%">
                               </td>
                               <td><p><strong>Input</strong></p>
-                                <audio id="asr_source" controls >
-                                    <source id="asr_src_source" src="audio/audiosr/input/8000/p361_281.wav" type="audio/wav" />
+                                <audio id="asr_source3" controls >
+                                    <source id="asr_src_source3" src="audio/audiosr/source/2000/p374_137.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_source" src="audio/audiosr/input/8000/p361_281.png" width="100%">
+                                <img id="asr_img_source3" src="audio/audiosr/source/2000/p374_137.png" width="100%">
                               </td>
                             </tr>
                             <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>NU-Wave2</strong></p>
-                                <audio id="asr_nuwave2" controls >
-                                    <source id="asr_src_nuwave2" src="audio/audiosr/nuwave2/8000/p361_281.wav" type="audio/wav" />
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>VoiceFixer</strong></p>
+                                <audio id="asr_voicefixer3" controls >
+                                    <source id="asr_src_voicefixer3" src="audio/audiosr/voicefixer/2000/p374_137.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_nuwave2" src="audio/audiosr/nuwave2/8000/p361_281.png" width="100%">
+                                <img id="asr_img_voicefixer3" src="audio/audiosr/voicefixer/2000/p374_137.png" width="100%">
+                              </td>
+                              <td><p><strong>NU-Wave 2</strong></p>
+                                <audio id="asr_nuwave23" controls >
+                                    <source id="asr_src_nuwave23" src="audio/audiosr/nuwave2/2000/p374_137.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_nuwave23" src="audio/audiosr/nuwave2/2000/p374_137.png" width="100%">
                               </td>
                               <td><p><strong>UDM+</strong></p>
-                                <audio id="asr_udm" controls >
-                                    <source id="asr_src_udm" src="audio/audiosr/udm/8000/p361_281.wav" type="audio/wav" />
+                                <audio id="asr_udm3" controls >
+                                    <source id="asr_src_udm3" src="audio/audiosr/udm/2000/p374_137.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_udm" src="audio/audiosr/udm/8000/p361_281.png" width="100%">
-                              </td>
-                              <td><p><strong>mdctGAN</strong></p>
-                                <audio id="asr_mdctgan" controls >
-                                    <source id="asr_src_mdctgan" src="audio/audiosr/mdctgan/8000/p361_281.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_mdctgan" src="audio/audiosr/mdctgan/8000/p361_281.png" width="100%">
+                                <img id="asr_img_udm3" src="audio/audiosr/udm/2000/p374_137.png" width="100%">
                               </td>
                             </tr>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter</strong></p>
-                                <audio id="asr_frepainter" controls >
-                                    <source id="asr_src_frepainter" src="audio/audiosr/frepainter/8000/p361_281.wav" type="audio/wav" />
+                                <audio id="asr_random3" controls >
+                                    <source id="asr_src_random3" src="audio/audiosr/random/2000/p374_137.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_frepainter" src="audio/audiosr/frepainter/8000/p361_281.png" width="100%">
+                                <img id="asr_img_random3" src="audio/audiosr/random/2000/p374_137.png" width="100%">
                               </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Euler, NFE=1)</strong></p>
-                                <audio id="asr_euler" controls >
-                                    <source id="asr_src_euler" src="audio/audiosr/euler/8000/p361_281.wav" type="audio/wav" />
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter (fixed)</strong></p>
+                                <audio id="asr_fix3" controls >
+                                    <source id="asr_src_fix3" src="audio/audiosr/fix/2000/p374_137.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_euler" src="audio/audiosr/euler/8000/p361_281.png" width="100%">
+                                <img id="asr_img_fix3" src="audio/audiosr/fix/2000/p374_137.png" width="100%">
                               </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Midpoint, NFE=2)</strong></p>
-                                <audio id="asr_midpoint" controls >
-                                    <source id="asr_src_midpoint" src="audio/audiosr/midpoint/8000/p361_281.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_midpoint" src="audio/audiosr/midpoint/8000/p361_281.png" width="100%">
-                              </td>
+                              <td></td>
                             </tr>
                           </tbody>
                         </table>
                       <p> </p>
                     </div>
-                </div> 
+                </div>  
 
                 <div class="row">
-                  <div class="col-lg-12 ml-auto">
-                    <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
-                        <thead>
-                          <tr>
-                            <th colspan="3"><p>Audio: p360_253 </p>
-                              <div id="emo_button" class="col-lg-12 ml-auto">
-                      <h7>Sampling rate</h7>
-            <input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p360_253');"/>
-            <input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p360_253');"/>
-            <input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p360_253');"/>
-            <input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p360_253');"/>
+                    <div class="col-lg-12 ml-auto">
+                      <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                          <thead>
+                            <tr>
+                              <th colspan="3"><p><em>Audio: s5_156 </em></p>
+                                <div id="emo_button" class="col-lg-12 ml-auto">
+                        <h7>Sampling rate</h7>
+						<input id="sr42000" type='button' value='2kHz' onclick="sr_click4(2000,'s5_156');"/>
+						<input id="sr44000" type='button' value='4kHz' onclick="sr_click4(4000,'s5_156');"/>
+						<input id="sr48000" type='button' value='8kHz' onclick="sr_click4(8000,'s5_156');"/>
+						<input id="sr412000" type='button' value='12kHz' onclick="sr_click4(12000,'s5_156');"/>
+						<input id="sr416000" type='button' value='16kHz' onclick="sr_click4(16000,'s5_156');"/>
+            <input id="sr424000" type='button' value='24kHz' onclick="sr_click4(24000,'s5_156');"/>
                     </div>
-                              </tr>
+                              <!--<p><em>When a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow.</em></p></th>-->
+                            </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
-                                <audio id="asr_gt" controls >
-                                    <source id="asr_src_gt" src="audio/audiosr/gt/8000/p360_253.wav" type="audio/wav" />
+                                <audio id="asr_gt4" controls >
+                                    <source id="asr_src_gt4" src="audio/audiosr/gt/2000/s5_156.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_gt" src="audio/audiosr/gt/8000/p360_253.png" width="100%">
+                                <img id="asr_img_gt4" src="audio/audiosr/gt/2000/s5_156.png" width="100%">
                               </td>
                               <td><p><strong>Input</strong></p>
-                                <audio id="asr_source" controls >
-                                    <source id="asr_src_source" src="audio/audiosr/input/8000/p360_253.wav" type="audio/wav" />
+                                <audio id="asr_source4" controls >
+                                    <source id="asr_src_source4" src="audio/audiosr/source/2000/s5_156.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_source" src="audio/audiosr/input/8000/p360_253.png" width="100%">
+                                <img id="asr_img_source4" src="audio/audiosr/source/2000/s5_156.png" width="100%">
                               </td>
                             </tr>
                             <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>NU-Wave2</strong></p>
-                                <audio id="asr_nuwave2" controls >
-                                    <source id="asr_src_nuwave2" src="audio/audiosr/nuwave2/8000/p360_253.wav" type="audio/wav" />
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>VoiceFixer</strong></p>
+                                <audio id="asr_voicefixer4" controls >
+                                    <source id="asr_src_voicefixer4" src="audio/audiosr/voicefixer/2000/s5_156.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_nuwave2" src="audio/audiosr/nuwave2/8000/p360_253.png" width="100%">
+                                <img id="asr_img_voicefixer4" src="audio/audiosr/voicefixer/2000/s5_156.png" width="100%">
+                              </td>
+                              <td><p><strong>NU-Wave 2</strong></p>
+                                <audio id="asr_nuwave24" controls >
+                                    <source id="asr_src_nuwave24" src="audio/audiosr/nuwave2/2000/s5_156.wav" type="audio/wav" />
+                                </audio>
+                                <img id="asr_img_nuwave24" src="audio/audiosr/nuwave2/2000/s5_156.png" width="100%">
                               </td>
                               <td><p><strong>UDM+</strong></p>
-                                <audio id="asr_udm" controls >
-                                    <source id="asr_src_udm" src="audio/audiosr/udm/8000/p360_253.wav" type="audio/wav" />
+                                <audio id="asr_udm4" controls >
+                                    <source id="asr_src_udm4" src="audio/audiosr/udm/2000/s5_156.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_udm" src="audio/audiosr/udm/8000/p360_253.png" width="100%">
-                              </td>
-                              <td><p><strong>mdctGAN</strong></p>
-                                <audio id="asr_mdctgan" controls >
-                                    <source id="asr_src_mdctgan" src="audio/audiosr/mdctgan/8000/p360_253.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_mdctgan" src="audio/audiosr/mdctgan/8000/p360_253.png" width="100%">
+                                <img id="asr_img_udm4" src="audio/audiosr/udm/2000/s5_156.png" width="100%">
                               </td>
                             </tr>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter</strong></p>
-                                <audio id="asr_frepainter" controls >
-                                    <source id="asr_src_frepainter" src="audio/audiosr/frepainter/8000/p360_253.wav" type="audio/wav" />
+                                <audio id="asr_random4" controls >
+                                    <source id="asr_src_random4" src="audio/audiosr/random/2000/s5_156.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_frepainter" src="audio/audiosr/frepainter/8000/p360_253.png" width="100%">
+                                <img id="asr_img_random4" src="audio/audiosr/random/2000/s5_156.png" width="100%">
                               </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Euler, NFE=1)</strong></p>
-                                <audio id="asr_euler" controls >
-                                    <source id="asr_src_euler" src="audio/audiosr/euler/8000/p360_253.wav" type="audio/wav" />
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter (fixed)</strong></p>
+                                <audio id="asr_fix4" controls >
+                                    <source id="asr_src_fix4" src="audio/audiosr/fix/2000/s5_156.wav" type="audio/wav" />
                                 </audio>
-                                <img id="asr_img_euler" src="audio/audiosr/euler/8000/p360_253.png" width="100%">
+                                <img id="asr_img_fix4" src="audio/audiosr/fix/2000/s5_156.png" width="100%">
                               </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Midpoint, NFE=2)</strong></p>
-                                <audio id="asr_midpoint" controls >
-                                    <source id="asr_src_midpoint" src="audio/audiosr/midpoint/8000/p360_253.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_midpoint" src="audio/audiosr/midpoint/8000/p360_253.png" width="100%">
-                              </td>
+                              <td></td>
                             </tr>
                           </tbody>
                         </table>
                       <p> </p>
                     </div>
-                </div> 
-                
-
-                <div class="row">
-                  <div class="col-lg-12 ml-auto">
-                    <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
-                        <thead>
-                          <tr>
-                            <th colspan="3"><p>Audio: p376_159 </p>
-                              <div id="emo_button" class="col-lg-12 ml-auto">
-                      <h7>Sampling rate</h7>
-            <input id="sr8000" type='button' value='8kHz' onclick="sr_click(8000,'p376_159');"/>
-            <input id="sr12000" type='button' value='12kHz' onclick="sr_click(12000,'p376_159');"/>
-            <input id="sr16000" type='button' value='16kHz' onclick="sr_click(16000,'p376_159');"/>
-            <input id="sr24000" type='button' value='24kHz' onclick="sr_click(24000,'p376_159');"/>
-                    </div>
-                              </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
-                                <audio id="asr_gt" controls >
-                                    <source id="asr_src_gt" src="audio/audiosr/gt/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_gt" src="audio/audiosr/gt/8000/p376_159.png" width="100%">
-                              </td>
-                              <td><p><strong>Input</strong></p>
-                                <audio id="asr_source" controls >
-                                    <source id="asr_src_source" src="audio/audiosr/input/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_source" src="audio/audiosr/input/8000/p376_159.png" width="100%">
-                              </td>
-                            </tr>
-                            <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>NU-Wave2</strong></p>
-                                <audio id="asr_nuwave2" controls >
-                                    <source id="asr_src_nuwave2" src="audio/audiosr/nuwave2/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_nuwave2" src="audio/audiosr/nuwave2/8000/p376_159.png" width="100%">
-                              </td>
-                              <td><p><strong>UDM+</strong></p>
-                                <audio id="asr_udm" controls >
-                                    <source id="asr_src_udm" src="audio/audiosr/udm/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_udm" src="audio/audiosr/udm/8000/p376_159.png" width="100%">
-                              </td>
-                              <td><p><strong>mdctGAN</strong></p>
-                                <audio id="asr_mdctgan" controls >
-                                    <source id="asr_src_mdctgan" src="audio/audiosr/mdctgan/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_mdctgan" src="audio/audiosr/mdctgan/8000/p376_159.png" width="100%">
-                              </td>
-                            </tr>
-                            <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>Fre-Painter</strong></p>
-                                <audio id="asr_frepainter" controls >
-                                    <source id="asr_src_frepainter" src="audio/audiosr/frepainter/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_frepainter" src="audio/audiosr/frepainter/8000/p376_159.png" width="100%">
-                              </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Euler, NFE=1)</strong></p>
-                                <audio id="asr_euler" controls >
-                                    <source id="asr_src_euler" src="audio/audiosr/euler/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_euler" src="audio/audiosr/euler/8000/p376_159.png" width="100%">
-                              </td>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>FLowHigh (Midpoint, NFE=2)</strong></p>
-                                <audio id="asr_midpoint" controls >
-                                    <source id="asr_src_midpoint" src="audio/audiosr/midpoint/8000/p376_159.wav" type="audio/wav" />
-                                </audio>
-                                <img id="asr_img_midpoint" src="audio/audiosr/midpoint/8000/p376_159.png" width="100%">
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      <p> </p>
-                    </div>
-                </div> 
-
-
+                </div>  
                 </div>  
             </div>
         </section>
@@ -459,10 +451,10 @@
 
 
 
-        <!-- <section class="page-section bg-primary text-white mb-0" id="steps">
+        <section class="page-section bg-primary text-white mb-0" id="ablation">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block">Sampling steps</h2>
+                    <h2 class="page-section-heading d-inline-block">Ablation Study</h2>
  
                 </div>
 
@@ -789,9 +781,9 @@
                   </div>
               </div>
                     </div>
-                    </section> -->
+                    </section>
 
-                    <!-- <section class="page-section bg-info text-white mb-0" id="tts">
+                    <section class="page-section bg-info text-white mb-0" id="tts">
             <div class="container">
                 <div class="text-center">
                     <h2 class="page-section-heading d-inline-block">Speech Synthesis</h2>
@@ -984,7 +976,7 @@
 
               </div>
                     </div>
-                    </section>    -->
+                    </section>   
 
 
 
