@@ -27,7 +27,11 @@
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" integrity="sha512-3q8fi8M0VS+X/3n64Ndpp6Bit7oXSiyCnzmlx6IDBLGlY5euFySyJ46RUlqIVs0DPCGOypqP8IRk/EyPvU28mQ==" crossorigin="anonymous" />
-    </head>
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      </head>
     
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -970,6 +974,200 @@
                     </div>
                     </section>   
 
+
+                    <section class="page-section bg-info text-white mb-0" id="paths">
+                      <div class="container">
+                          <div class="text-center">
+                              <h2 class="page-section-heading d-inline-block">Path Analysis</h2>
+                          </div>
+          
+                          <div class="divider-custom divider-light">
+                              <!-- <div class="divider-custom"></div> -->
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-auto ml-auto">
+                                <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px; width: 100%;">
+                                    <thead>
+                                      <tr>
+                                        <th colspan="3"><p>Audio: p360_003 (8 kHz to 48 kHz)</p>
+                                        <p><em></em></p></th>
+                                      </tr>
+                                    </thead>
+          
+                                    <tbody>
+                                      <tr>
+                                        <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
+                                          <p><em></em></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/gt/8000/p360_003.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/gt/8000/p360_003.png" width="100%">
+                                        </td>
+                                        <td><p><strong>Input</strong></p>
+                                          <p><em></em></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/input/8000/p360_003.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/input/8000/p360_003.png" width="100%">
+                                        </td>
+                                        <td><p><strong>GT Reconstruction (w/ Post-processing)</strong></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/reconstruction/8000/p360_003.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/reconstruction/8000/p360_003.png" width="100%">
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1$, $\sigma_t=1-(1-\sigma)t$)</strong></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/zero_adaptive/8000/p360_003.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/zero_adaptive/8000/p360_003.png" width="100%">
+                                        </td>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1+(1-t)x_0$, $\sigma_t=\sigma$)</strong></p>
+                                          <audio id="player" controls >
+                                            <source src="audio/paths/adaptive_constant/8000/p360_003.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/adaptive_constant/8000/p360_003.png" width="100%">
+                                        </td>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1+(1-t)x_0$, $\sigma_t=1-(1-\sigma)t$)</strong></p>
+                                          <audio id="player" controls >
+                                            <source src="audio/paths/adaptive_adaptive/8000/p360_003.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/adaptive_adaptive/8000/p360_003.png" width="100%">
+                                        </td>                                        
+                                       </tr>                            
+                                      
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-lg-auto ml-auto">
+                                <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px; width: 100%;">
+                                    <thead>
+                                      <tr>
+                                        <th colspan="3"><p>Audio: p364_165 (12 kHz to 48 kHz)</p>
+                                        <p><em></em></p></th>
+                                      </tr>
+                                    </thead>
+          
+                                    <tbody>
+                                      <tr>
+                                        <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
+                                          <p><em></em></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/gt/12000/p364_165.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/gt/12000/p364_165.png" width="100%">
+                                        </td>
+                                        <td><p><strong>Input</strong></p>
+                                          <p><em></em></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/input/12000/p364_165.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/input/12000/p364_165.png" width="100%">
+                                        </td>
+                                        <td><p><strong>GT Reconstruction (w/ Post-processing)</strong></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/reconstruction/12000/p364_165.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/reconstruction/12000/p364_165.png" width="100%">
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1$, $\sigma_t=1-(1-\sigma)t$)</strong></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/zero_adaptive/12000/p364_165.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/zero_adaptive/12000/p364_165.png" width="100%">
+                                        </td>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1+(1-t)x_0$, $\sigma_t=\sigma$)</strong></p>
+                                          <audio id="player" controls >
+                                            <source src="audio/paths/adaptive_constant/12000/p364_165.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/adaptive_constant/12000/p364_165.png" width="100%">
+                                        </td>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1+(1-t)x_0$, $\sigma_t=1-(1-\sigma)t$)</strong></p>
+                                          <audio id="player" controls >
+                                            <source src="audio/paths/adaptive_adaptive/12000/p364_165.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/adaptive_adaptive/12000/p364_165.png" width="100%">
+                                        </td>                                        
+                                       </tr>                            
+                                      
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>                            
+
+                            <div class="row">
+                              <div class="col-lg-auto ml-auto">
+                                <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px; width: 100%;">
+                                    <thead>
+                                      <tr>
+                                        <th colspan="3"><p>Audio: p362_207 (16 kHz to 48 kHz)</p>
+                                        <p><em></em></p></th>
+                                      </tr>
+                                    </thead>
+          
+                                    <tbody>
+                                      <tr>
+                                        <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
+                                          <p><em></em></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/gt/16000/p362_207.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/gt/16000/p362_207.png" width="100%">
+                                        </td>
+                                        <td><p><strong>Input</strong></p>
+                                          <p><em></em></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/input/16000/p362_207.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/input/16000/p362_207.png" width="100%">
+                                        </td>
+                                        <td><p><strong>GT Reconstruction (w/ Post-processing)</strong></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/reconstruction/16000/p362_207.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/reconstruction/16000/p362_207.png" width="100%">
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1$, $\sigma_t=1-(1-\sigma)t$)</strong></p>
+                                          <audio id="player" controls >
+                                              <source src="audio/paths/zero_adaptive/16000/p362_207.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/zero_adaptive/16000/p362_207.png" width="100%">
+                                        </td>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1+(1-t)x_0$, $\sigma_t=\sigma$)</strong></p>
+                                          <audio id="player" controls >
+                                            <source src="audio/paths/adaptive_constant/16000/p362_207.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/adaptive_constant/16000/p362_207.png" width="100%">
+                                        </td>
+                                        <td><p><strong>FLowHigh ($\mu_t(z)=tx_1+(1-t)x_0$, $\sigma_t=1-(1-\sigma)t$)</strong></p>
+                                          <audio id="player" controls >
+                                            <source src="audio/paths/adaptive_adaptive/16000/p362_207.wav" type="audio/wav" />
+                                          </audio>
+                                          <img id="asr_img_gt" src="audio/paths/adaptive_adaptive/16000/p362_207.png" width="100%">
+                                        </td>                                        
+                                       </tr>                            
+                                      
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>                            
+
+
+                              </div>
+                              </section>   
+          
 
 
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
