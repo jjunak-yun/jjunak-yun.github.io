@@ -197,7 +197,7 @@ img {
 }
 
 .hero-greeting {
-  margin: 2px 0 34px;
+  margin: 2px 0 52px;
   font-size: clamp(2rem, 3.3vw, 3.2rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -229,6 +229,11 @@ img {
   color: #111827;
   font-size: 1.08rem;
   line-height: 1.75;
+}
+
+.hero-about-text + .hero-about-text {
+  margin-top: 1.1em;
+  margin-bottom: 0;
 }
 
 .hero-about-text a {
@@ -533,6 +538,23 @@ main {
   font-size: 0.96rem;
   color: #334155;
   font-weight: 700;
+}
+
+.timeline-content--edu {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.edu-logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 4px;
 }
 
 .timeline-content h3 {
