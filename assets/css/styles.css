@@ -24,11 +24,12 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter,
-    Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans KR", "Inter", "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 a {
@@ -140,7 +141,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 26%;
+  object-position: center 20%;
+  transform: scale(0.9);
 }
 
 .hero-left {
@@ -159,7 +161,7 @@ img {
 .hero-social-icons {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
 }
 
 .eyebrow {
@@ -188,7 +190,7 @@ img {
 }
 
 .hero-greeting {
-  margin: 2px 0 24px;
+  margin: 2px 0 34px;
   font-size: clamp(2rem, 3.3vw, 3.2rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -220,6 +222,16 @@ img {
   color: #111827;
   font-size: 1.08rem;
   line-height: 1.75;
+}
+
+.hero-about-text a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero-about-text a:hover {
+  color: #1d4ed8;
 }
 
 .hero-interest-list {
@@ -335,8 +347,8 @@ img {
 }
 
 .icon-btn svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
 }
 
@@ -351,8 +363,9 @@ img {
   height: auto;
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 2px;
   color: #334155;
+  line-height: 0;
 }
 
 .icon-btn.icon-plain:hover {
