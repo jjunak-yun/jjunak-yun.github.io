@@ -236,6 +236,17 @@ img {
   margin-bottom: 0;
 }
 
+.hero-about-text p {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.hero-about-text p:last-child {
+  margin-bottom: 0;
+}
+
 .hero-about-text a {
   color: #2563eb;
   text-decoration: underline;
@@ -605,6 +616,14 @@ main {
   margin: 0;
   color: var(--muted);
   font-size: 0.98rem;
+}
+
+.publication-venue p {
+  margin: 0;
+}
+
+.publication-list .publication-card + .publication-card {
+  margin-top: 14px;
 }
 
 .publication-links {

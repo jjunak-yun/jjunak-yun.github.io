@@ -1,0 +1,23 @@
+groups:
+  - category: "International Conferences"
+    papers:
+      - title: "FLowHigh: Towards Efficient and High-Quality Audio Super-Resolution with Single-Step Flow Matching"
+        authors: "J.-H. Yun, S.-B. Kim, and S.-W. Lee"
+        venue_md: "In *ICASSP*, 2025"
+        links:
+          - label: "Paper"
+            url: "https://arxiv.org/abs/2501.04926"
+          - label: "Code"
+            url: "https://github.com/jjunak-yun/FLowHigh_code"
+          - label: "Demo"
+            url: "https://jjunak-yun.github.io/FLowHigh/"
+
+  - category: "Domestic Conferences"
+    papers:
+      - title: "Distributed Neural Network Optimization Study using Adaptive Approach for Multi-Agent Collaborative Learning Application"
+        authors: "J.-H. Yun, S.-H. Jeon, and Y.-J. Lee"
+        venue_md: "In *ACK*, 2023"
+
+      - title: "Image Restoration based on Reverse Diffusion of Incremental Degradation"
+        authors: "J.-H. Yun, J.-J. Kim, T.-G. Kim, S.-H. Lee, and H.-S. Yang"
+        venue_md: "In *IEIE*, 2023"

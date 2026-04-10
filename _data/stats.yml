@@ -1,0 +1,11 @@
+- number: "1+"
+  label: "International Publication"
+
+- number: "2+"
+  label: "Domestic Publications"
+
+- number: "3+"
+  label: "Research Affiliations"
+
+- number: "AI"
+  label: "Speech & Audio Research"

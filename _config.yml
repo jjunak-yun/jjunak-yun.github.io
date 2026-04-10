@@ -1,0 +1,9 @@
+title: "Jun-Hak Yun"
+description: "Ph.D. student in Artificial Intelligence at Korea University."
+markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - hs-oh-prml.github.io

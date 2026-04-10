@@ -1,0 +1,29 @@
+name: "Jun-Hak Yun"
+title_suffix: " | Portfolio"
+meta_description: "Jun-Hak Yun - Ph.D. student in Artificial Intelligence at Korea University. Research in Text-to-Speech, Speech Enhancement, Generative Models, and Large Language Models."
+photo: "assets/img/jh_yun.jpg"
+role_line: "Ph.D. student @ Korea Univ."
+greeting_prefix: "Hello! I'm"
+greeting_name: "Jun-Hak Yun"
+
+email: "mailto:jh_yun@korea.ac.kr"
+linkedin: "https://www.linkedin.com/in/JunhakYun-b64970332/"
+github: "https://github.com/jjunak-yun"
+scholar: "https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ"
+
+about_paragraphs_md:
+  - |
+    I am a Ph.D. student in the Department of Artificial Intelligence at Korea University,<br />
+    where I am currently affiliated with the <a href="http://pr.korea.ac.kr/" target="_blank" rel="noopener noreferrer">PRML Lab</a><br />
+    under the supervision of Professor <a href="https://scholar.google.com/citations?hl=en&user=5yNbjSoAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer">Seong-Whan Lee</a>.
+  - |
+    My research is centered on AI-based speech and audio processing, especially speech synthesis<br />
+    and audio generation driven by generative models and large language models.
+
+research_interests:
+  - "Speech Processing"
+  - "Audio Generation"
+  - "Generative Models"
+  - "Large Language Models"
+
+footer_year: 2026
