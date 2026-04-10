@@ -131,6 +131,27 @@
       padding: 14px 0 0;
     }
 
+    .profile-photo-slot {
+      width: 120px;
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      border: 1px dashed #cbd5e1;
+      background: #f8fafc;
+      color: #64748b;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .profile-photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -193,6 +214,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      align-items: center;
     }
 
     .btn {
@@ -227,6 +249,37 @@
     .btn-secondary:hover {
       border-color: #cbd5e1;
       background: #f8fafc;
+    }
+
+    .icon-links {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s ease;
+    }
+
+    .icon-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .icon-btn:hover {
+      color: var(--accent);
+      border-color: #bfdbfe;
+      background: #eff6ff;
     }
 
     .hero-side {
@@ -296,28 +349,8 @@
     }
 
     .social-links {
-      display: grid;
-      gap: 10px;
-    }
-
-    .social-link {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      transition: 0.2s ease;
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .social-link:hover {
-      color: var(--accent);
-      border-color: #bfdbfe;
-      background: #eff6ff;
+      gap: 10px;
     }
 
     main {
@@ -521,6 +554,12 @@
       color: var(--muted);
     }
 
+    .contact-links {
+      display: inline-flex;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
     footer {
       padding: 26px 0 40px;
       color: var(--subtle);
@@ -602,6 +641,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-main">
+          <div class="profile-photo-slot">PHOTO</div>
           <div class="eyebrow">Artificial Intelligence Researcher</div>
           <h1>Hi, I’m <span>Jun-Hak Yun</span></h1>
           <p class="hero-subtitle">
@@ -621,8 +661,23 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#publications">View Publications</a>
-            <a class="btn btn-secondary" href="https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/JunhakYun-b64970332/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div class="icon-links">
+              <a class="icon-btn" href="https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.18V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-3.82L12 17Z"></path>
+                </svg>
+              </a>
+              <a class="icon-btn" href="https://www.linkedin.com/in/JunhakYun-b64970332/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.94 8.5a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM5 9.98h3.88V20H5V9.98Zm6.16 0h3.72v1.37h.05c.52-.98 1.78-2.01 3.67-2.01C22.53 9.34 23 11.9 23 15.22V20h-3.88v-4.22c0-1.01-.02-2.3-1.4-2.3-1.4 0-1.62 1.1-1.62 2.23V20h-3.94V9.98Z"></path>
+                </svg>
+              </a>
+              <a class="icon-btn" href="https://github.com/jjunak-yun" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.41-4.04-1.41-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.83 1.32 3.52 1 .1-.79.42-1.32.76-1.62-2.67-.3-5.48-1.34-5.48-5.95 0-1.32.47-2.4 1.24-3.25-.13-.3-.54-1.53.12-3.19 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.28-1.56 3.29-1.24 3.29-1.24.66 1.66.25 2.89.12 3.19.77.85 1.23 1.93 1.23 3.25 0 4.62-2.81 5.64-5.49 5.94.44.38.82 1.11.82 2.25v3.33c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -651,17 +706,20 @@
           </div>
 
           <div class="social-links">
-            <a class="social-link" href="https://www.linkedin.com/in/JunhakYun-b64970332/" target="_blank" rel="noopener noreferrer">
-              <span>LinkedIn</span>
-              <span>↗</span>
+            <a class="icon-btn" href="https://www.linkedin.com/in/JunhakYun-b64970332/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.94 8.5a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM5 9.98h3.88V20H5V9.98Zm6.16 0h3.72v1.37h.05c.52-.98 1.78-2.01 3.67-2.01C22.53 9.34 23 11.9 23 15.22V20h-3.88v-4.22c0-1.01-.02-2.3-1.4-2.3-1.4 0-1.62 1.1-1.62 2.23V20h-3.94V9.98Z"></path>
+              </svg>
             </a>
-            <a class="social-link" href="https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ" target="_blank" rel="noopener noreferrer">
-              <span>Google Scholar</span>
-              <span>↗</span>
+            <a class="icon-btn" href="https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.18V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-3.82L12 17Z"></path>
+              </svg>
             </a>
-            <a class="social-link" href="https://github.com/jjunak-yun" target="_blank" rel="noopener noreferrer">
-              <span>GitHub</span>
-              <span>↗</span>
+            <a class="icon-btn" href="https://github.com/jjunak-yun" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.41-4.04-1.41-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.83 1.32 3.52 1 .1-.79.42-1.32.76-1.62-2.67-.3-5.48-1.34-5.48-5.95 0-1.32.47-2.4 1.24-3.25-.13-.3-.54-1.53.12-3.19 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.28-1.56 3.29-1.24 3.29-1.24.66 1.66.25 2.89.12 3.19.77.85 1.23 1.93 1.23 3.25 0 4.62-2.81 5.64-5.49 5.94.44.38.82 1.11.82 2.25v3.33c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"></path>
+              </svg>
             </a>
           </div>
         </aside>
@@ -905,11 +963,23 @@
 
             <div class="contact-card">
               <h3>Links</h3>
-              <p>
-                <a href="https://github.com/jjunak-yun" target="_blank" rel="noopener noreferrer">GitHub</a><br />
-                <a href="https://www.linkedin.com/in/JunhakYun-b64970332/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
-                <a href="https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-              </p>
+              <div class="contact-links">
+                <a class="icon-btn" href="https://github.com/jjunak-yun" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.41-4.04-1.41-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.83 1.32 3.52 1 .1-.79.42-1.32.76-1.62-2.67-.3-5.48-1.34-5.48-5.95 0-1.32.47-2.4 1.24-3.25-.13-.3-.54-1.53.12-3.19 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.28-1.56 3.29-1.24 3.29-1.24.66 1.66.25 2.89.12 3.19.77.85 1.23 1.93 1.23 3.25 0 4.62-2.81 5.64-5.49 5.94.44.38.82 1.11.82 2.25v3.33c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"></path>
+                  </svg>
+                </a>
+                <a class="icon-btn" href="https://www.linkedin.com/in/JunhakYun-b64970332/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.94 8.5a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM5 9.98h3.88V20H5V9.98Zm6.16 0h3.72v1.37h.05c.52-.98 1.78-2.01 3.67-2.01C22.53 9.34 23 11.9 23 15.22V20h-3.88v-4.22c0-1.01-.02-2.3-1.4-2.3-1.4 0-1.62 1.1-1.62 2.23V20h-3.94V9.98Z"></path>
+                  </svg>
+                </a>
+                <a class="icon-btn" href="https://scholar.google.co.kr/citations?hl=ko&user=Qk4l_J0AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.18V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-3.82L12 17Z"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
