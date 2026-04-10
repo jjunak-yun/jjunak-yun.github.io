@@ -109,27 +109,26 @@
 
     .hero {
       padding: 84px 0 48px;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      background: transparent;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr 0.85fr;
-      gap: 24px;
-      align-items: stretch;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
     .hero-main,
     .hero-side,
     .section-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     .hero-main {
-      padding: 40px;
+      padding: 14px 0 0;
     }
 
     .eyebrow {
@@ -231,7 +230,7 @@
     }
 
     .hero-side {
-      padding: 28px;
+      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -276,7 +275,7 @@
 
     .info-item {
       padding: 14px 16px;
-      background: var(--card-alt);
+      background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 16px;
     }
@@ -308,7 +307,7 @@
       gap: 12px;
       padding: 14px 16px;
       border-radius: 16px;
-      background: var(--card-alt);
+      background: #ffffff;
       border: 1px solid var(--border);
       transition: 0.2s ease;
       color: var(--muted);
@@ -330,14 +329,11 @@
     }
 
     .section-card {
-      padding: 32px;
+      padding: 28px 0 10px;
     }
 
     .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
+      display: block;
       margin-bottom: 24px;
     }
 
@@ -363,7 +359,7 @@
     .stats-grid {
       margin-top: 24px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 14px;
     }
 
@@ -394,8 +390,8 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 18px;
+      grid-template-columns: 1fr;
+      gap: 8px;
       align-items: start;
       padding: 18px 0;
       border-top: 1px solid var(--border);
@@ -444,7 +440,7 @@
     .publication-card {
       padding: 22px;
       border-radius: 18px;
-      background: var(--card-alt);
+      background: #ffffff;
       border: 1px solid var(--border);
     }
 
@@ -495,7 +491,7 @@
     .award-item {
       padding: 18px 20px;
       border-radius: 18px;
-      background: var(--card-alt);
+      background: #ffffff;
       border: 1px solid var(--border);
       color: var(--muted);
       font-weight: 600;
@@ -503,7 +499,7 @@
 
     .contact-box {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 16px;
       margin-top: 8px;
     }
@@ -511,7 +507,7 @@
     .contact-card {
       padding: 20px;
       border-radius: 18px;
-      background: var(--card-alt);
+      background: #ffffff;
       border: 1px solid var(--border);
     }
 
@@ -543,17 +539,9 @@
 
     @media (max-width: 980px) {
       .hero-grid,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
+      .contact-box,
       .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .timeline-item {
         grid-template-columns: 1fr;
-        gap: 8px;
       }
     }
 
@@ -575,7 +563,7 @@
       .hero-main,
       .hero-side,
       .section-card {
-        padding: 24px;
+        padding: 12px 0;
       }
 
       .stats-grid {
