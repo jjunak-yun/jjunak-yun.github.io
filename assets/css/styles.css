@@ -550,10 +550,10 @@ main {
   height: 64px;
   flex-shrink: 0;
   object-fit: contain;
-  border-radius: 10px;
-  background: #ffffff;
-  border: 1px solid var(--border);
-  padding: 4px;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .timeline-content h3 {

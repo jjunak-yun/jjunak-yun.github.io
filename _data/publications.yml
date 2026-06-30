@@ -22,7 +22,7 @@ groups:
           - label: "Demo"
             url: "https://jjunak-yun.github.io/FLowHigh/"
 
-  - category: "Domestic Conferences"
+  - category: "Domestic Conferences in Korea"
     papers:
       - title: "Distributed Neural Network Optimization Study using Adaptive Approach for Multi-Agent Collaborative Learning Application"
         authors: "J.-H. Yun, S.-H. Jeon, and Y.-J. Lee"
