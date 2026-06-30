@@ -11,7 +11,6 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <nav class="nav">
-        <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
@@ -65,27 +64,6 @@
                 {% endfor %}
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-card">
-          <div class="section-heading">
-            <div>
-              <h2 class="section-title">About</h2>
-              <p class="section-subtitle">A concise overview of my academic and research background</p>
-            </div>
-          </div>
-          <div class="stats-grid">
-            {% for s in site.data.stats %}
-              <div class="stat-card">
-                <span class="stat-number">{{ s.number }}</span>
-                <span class="stat-label">{{ s.label }}</span>
-              </div>
-            {% endfor %}
           </div>
         </div>
       </div>

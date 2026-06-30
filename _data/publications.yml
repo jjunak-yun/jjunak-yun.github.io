@@ -1,6 +1,16 @@
 groups:
   - category: "International Conferences"
     papers:
+      - title: "ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment"
+        authors: "J.-H. Yun, S.-B. Kim, and S.-W. Lee"
+        venue_md: "In *ACL*, 2026"
+        links:
+          - label: "Paper"
+            url: "https://arxiv.org/abs/2605.30965"
+          - label: "Code"
+            url: "https://github.com/jjunak-yun/ImmersiveTTS"
+          - label: "Demo"
+            url: "https://jjunak-yun.github.io/ImmersiveTTS/"
       - title: "FLowHigh: Towards Efficient and High-Quality Audio Super-Resolution with Single-Step Flow Matching"
         authors: "J.-H. Yun, S.-B. Kim, and S.-W. Lee"
         venue_md: "In *ICASSP*, 2025"
