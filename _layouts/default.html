@@ -136,16 +136,23 @@
                 <div class="publication-category">{{ group.category }}</div>
                 {% for paper in group.papers %}
                   <div class="publication-card">
-                    <h3 class="publication-title">{{ paper.title }}</h3>
-                    <p class="publication-authors">{{ paper.authors }}</p>
-                    <div class="publication-venue">{{ paper.venue_md | markdownify }}</div>
-                    {% if paper.links %}
-                      <div class="publication-links">
-                        {% for link in paper.links %}
-                          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
-                        {% endfor %}
+                    {% if paper.figure %}
+                      <div class="publication-figure">
+                        <img src="{{ paper.figure | relative_url }}" alt="{{ paper.figure_alt }}" loading="lazy" />
                       </div>
                     {% endif %}
+                    <div class="publication-body">
+                      <h3 class="publication-title">{{ paper.title }}</h3>
+                      <p class="publication-authors">{{ paper.authors }}</p>
+                      <div class="publication-venue">{{ paper.venue_md | markdownify }}</div>
+                      {% if paper.links %}
+                        <div class="publication-links">
+                          {% for link in paper.links %}
+                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                    </div>
                   </div>
                 {% endfor %}
               </div>

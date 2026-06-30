@@ -589,11 +589,31 @@ main {
 }
 
 .publication-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
   padding: 20px 0;
   border-radius: 0;
   background: transparent;
   border: none;
   border-top: 1px solid var(--border);
+}
+
+.publication-figure {
+  width: 210px;
+  flex-shrink: 0;
+}
+
+.publication-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.publication-body {
+  flex: 1;
+  min-width: 0;
 }
 
 .publication-title {
@@ -746,6 +766,16 @@ footer {
 
   .profile-photo-slot {
     width: 210px;
+  }
+
+  .publication-card {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .publication-figure {
+    width: 100%;
+    max-width: 320px;
   }
 
   .contact-box {

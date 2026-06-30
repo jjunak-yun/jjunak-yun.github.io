@@ -4,6 +4,8 @@ groups:
       - title: "ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment"
         authors: "J.-H. Yun, S.-B. Kim, and S.-W. Lee"
         venue_md: "In *ACL*, 2026"
+        figure: "assets/img/ImmersiveTTS.jpg"
+        figure_alt: "ImmersiveTTS model architecture"
         links:
           - label: "Paper"
             url: "https://arxiv.org/abs/2605.30965"
@@ -14,6 +16,8 @@ groups:
       - title: "FLowHigh: Towards Efficient and High-Quality Audio Super-Resolution with Single-Step Flow Matching"
         authors: "J.-H. Yun, S.-B. Kim, and S.-W. Lee"
         venue_md: "In *ICASSP*, 2025"
+        figure: "assets/img/FLowHigh.jpg"
+        figure_alt: "FLowHigh spectrogram comparison"
         links:
           - label: "Paper"
             url: "https://arxiv.org/abs/2501.04926"
