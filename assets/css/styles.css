@@ -590,7 +590,7 @@ main {
 
 .publication-card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 22px;
   padding: 20px 0;
   border-radius: 0;
@@ -600,7 +600,7 @@ main {
 }
 
 .publication-figure {
-  width: 210px;
+  width: 250px;
   flex-shrink: 0;
 }
 
